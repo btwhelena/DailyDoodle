@@ -8,14 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                NavigationLink {
+                    DrawView()
+                        .toolbar {
+                            // 1
+                            ToolbarItem(placement: .principal) {
+
+                                HStack {
+                                    Button(action: {}, label: {
+                                        Image(systemName: "arrow.uturn.backward.circle")
+                                    })
+                                    Button(action: {}, label: {
+                                        Image(systemName: "arrow.uturn.forward.circle")
+                                    })
+                                }
+
+                            }
+
+                            ToolbarItem(placement: .navigationBarTrailing) {
+
+                                HStack {
+                                    Button(action: {}, label: {
+                                        Image(systemName: "square.and.arrow.up")
+                                    })
+                                    Button(action: {}, label: {
+                                        Image(systemName: "checkmark.circle.fill")
+                                    })
+                                }
+
+                            }
+                        }
+                } label: {
+                    Label("Work Folder", systemImage: "folder")
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
