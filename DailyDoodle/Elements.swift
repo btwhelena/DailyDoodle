@@ -12,13 +12,13 @@ struct Elements: View {
 
         // Circulo mais claro
         Circle()
-            .fill(Color(red: 87/255, green: 81/255, blue: 207/255).opacity(0.62))
+            .fill(Color("CTA").opacity(0.62))
             .frame(width: 1000, height: 1000)
             .position(x: 220, y: -340)
 
         // Circulo mais escuro
         Circle()
-            .fill(Color(red: 87/255, green: 81/255, blue: 207/255))
+            .fill(Color("CTA"))
             .frame(width: 1000, height: 1000)
             .position(x: 200, y: -350)
 
