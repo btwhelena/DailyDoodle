@@ -24,12 +24,12 @@ struct Elements: View {
 
         Text("Tema do mês:")
             .foregroundColor(.white)
-            .font(.title)
+            .font(Font.custom("Comfortaa-Bold", size: 28))
             .position(x: 200, y: 45)
 
         Text("Carnaval")
             .foregroundColor(.white)
-            .font(.largeTitle)
+            .font(Font.custom("Comfortaa-Bold", size: 36, relativeTo: .title))
             .position(x: 200, y: 90)
     }
 }
