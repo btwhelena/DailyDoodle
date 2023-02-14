@@ -11,6 +11,7 @@
 		0DA7958E299A7B18003CA2AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958D299A7B18003CA2AC /* ContentView.swift */; };
 		0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA7958F299A7B19003CA2AC /* Assets.xcassets */; };
 		0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */; };
+		0DA7959B299BA73E003CA2AC /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7959A299BA73E003CA2AC /* Elements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0DA7958D299A7B18003CA2AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0DA7958F299A7B19003CA2AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0DA7959A299BA73E003CA2AC /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */,
 				0DA7958D299A7B18003CA2AC /* ContentView.swift */,
+				0DA7959A299BA73E003CA2AC /* Elements.swift */,
 				0DA7958F299A7B19003CA2AC /* Assets.xcassets */,
 				0DA79591299A7B19003CA2AC /* Preview Content */,
 			);
@@ -77,6 +80,7 @@
 				0DA79584299A7B18003CA2AC /* Sources */,
 				0DA79585299A7B18003CA2AC /* Frameworks */,
 				0DA79586299A7B18003CA2AC /* Resources */,
+				0DA79599299A7B79003CA2AC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,6 +136,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DA79599299A7B79003CA2AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint DailyDoodle/*\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DA79584299A7B18003CA2AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +163,7 @@
 			files = (
 				0DA7958E299A7B18003CA2AC /* ContentView.swift in Sources */,
 				0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */,
+				0DA7959B299BA73E003CA2AC /* Elements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
