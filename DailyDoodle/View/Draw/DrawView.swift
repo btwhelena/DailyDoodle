@@ -9,10 +9,8 @@ import SwiftUI
 import PencilKit
 struct DrawView: View {
     @State private var isImageFullScreen = false
-    @State var canvas: PKCanvasView = PKCanvasView()
-    @State var previewDrawing: PKDrawing? = nil
-
-
+    @Binding var canvasView: PKCanvasRepresentation
+    
     var body: some View {
         VStack {
             Button(action: {isImageFullScreen.toggle()}) {
@@ -21,7 +19,7 @@ struct DrawView: View {
             .fullScreenCover(isPresented: $isImageFullScreen, content: {
                 FullScreenModalView(image: UIImage(named: "CHALLENGE-1")!)
             })
-            PKCanvasRepresentation(canvas: $canvas)
+            canvasView
         }
     }
 }

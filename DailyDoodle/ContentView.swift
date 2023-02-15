@@ -6,36 +6,29 @@
 //
 
 import SwiftUI
+import PencilKit
 
 struct ContentView: View {
+    @State var canvasView = PKCanvasRepresentation()
     
     var body: some View {
         NavigationView {
             VStack {
                 NavigationLink {
-                    DrawView()
+                    DrawView(canvasView: $canvasView)
                         .toolbar {
                             // 1
                             ToolbarItem(placement: .principal) {
-
-                                HStack {
-                                    Button(action: {}, label: {
-                                        Image(systemName: "arrow.uturn.backward.circle")
-                                    })
-                                    Button(action: {}, label: {
-                                        Image(systemName: "arrow.uturn.forward.circle")
-                                    })
-                                }
-
+                                UndoAndRedoButtons()
                             }
 
                             ToolbarItem(placement: .navigationBarTrailing) {
 
                                 HStack {
-                                    Button(action: {}, label: {
+                                    Button(action: canvasView.shareDrawing, label: {
                                         Image(systemName: "square.and.arrow.up")
                                     })
-                                    Button(action: {}, label: {
+                                    Button(action: canvasView.finishChallenge, label: {
                                         Image(systemName: "checkmark.circle.fill")
                                     })
                                 }

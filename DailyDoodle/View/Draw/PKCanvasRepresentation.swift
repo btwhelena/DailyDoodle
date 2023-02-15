@@ -9,7 +9,9 @@ import SwiftUI
 import PencilKit
 
 struct PKCanvasRepresentation: UIViewRepresentable {
-    @Binding var canvas: PKCanvasView
+    var canvas: PKCanvasView = PKCanvasView()
+    //    var previewDrawing: PKDrawing? = nil
+
     @State var tool = PKToolPicker()
 
     func makeUIView(context: Context) -> PKCanvasView {
@@ -20,6 +22,17 @@ struct PKCanvasRepresentation: UIViewRepresentable {
 
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
     }
+
+    func shareDrawing() {
+        let image = canvas.drawing.image(from: canvas.bounds, scale: UIScreen.main.scale)
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+    }
+
+    func finishChallenge() {
+        let image = canvas.drawing.image(from: canvas.bounds, scale: UIScreen.main.scale)
+    }
+    
 }
 
 private extension PKCanvasRepresentation {
@@ -29,4 +42,3 @@ private extension PKCanvasRepresentation {
         canvas.becomeFirstResponder()
     }
 }
-
