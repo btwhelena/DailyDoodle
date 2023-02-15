@@ -10,15 +10,16 @@ import SwiftUI
 struct Elements: View {
     var body: some View {
         ZStack {
+
             // Circulo mais claro
             Ellipse()
-                .fill(Color("CTA").opacity(0.62))
+                .fill(Color("Circles").opacity(0.62))
                 .frame(width: 1000, height: 1000)
                 .position(x: 220, y: -340)
 
             // Circulo mais escuro
             Circle()
-                .fill(Color("CTA"))
+                .fill(Color("Circles"))
                 .frame(width: 1000, height: 1000)
                 .position(x: 200, y: -350)
 

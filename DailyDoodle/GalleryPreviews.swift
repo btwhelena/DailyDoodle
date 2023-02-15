@@ -14,11 +14,12 @@ struct GalleryPreviews: View {
     private let adaptiveColumns = [
         GridItem(.adaptive(minimum: 160))
     ]
+
     var body: some View {
         NavigationView {
-            ScrollView{
-                LazyVGrid(columns: adaptiveColumns, spacing: 15) {
-                    ForEach (data, id: \.self) { number in
+            ScrollView {
+                LazyVGrid(columns: adaptiveColumns, spacing: 8) {
+                    ForEach(data, id: \.self) { number in
                         ZStack {
                             Rectangle()
                                 .frame(width: 160, height: 120)
@@ -27,7 +28,8 @@ struct GalleryPreviews: View {
                         }
                     }
                 }
-            }
+            }.navigationBarHidden(true)
+                .background(Color("Background"))
         }
     }
 }
