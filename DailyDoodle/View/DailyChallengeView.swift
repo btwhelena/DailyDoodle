@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct DailyChallengeView: View {
+
+    @State private var image = UIImage()
+    @State private var showSheet = false
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -15,16 +19,16 @@ struct DailyChallengeView: View {
 
                 Image("Circles")
                     .resizable().scaledToFit()
-                    .offset(y: 320)
+                    .frame(maxHeight: .infinity, alignment: .bottom)
 
                 VStack {
 
                     Text("Desafio do dia")
-                        .frame(maxWidth: 330, alignment: .center)
+                        .frame(maxWidth: .infinity, alignment: .center)
                         .font(Font.custom("Comfortaa-Bold", size: 24))
+                        .padding(.bottom, 15)
                         .multilineTextAlignment(.center)
 
-                    Spacer()
 
                     Image("caxorro")
                         .resizable()
@@ -33,14 +37,16 @@ struct DailyChallengeView: View {
                         .cornerRadius(15)
                         .clipShape(Rectangle())
 
-                    Spacer().frame(height: 25)
+//                    Spacer().frame(height: 25)
 
                     Text("Tente desenhar a imagem de referência acima ou escolha um desenho da sua galeria.")
                         .frame(maxWidth: 330, alignment: .center)
-                        .font(Font.custom("Comfortaa-Bold", fixedSize: 24))
+                        .padding(.top, 15)
+                        .padding(.bottom, 15)
+                        .font(Font.custom("Comfortaa-Regular", fixedSize: 24))
                         .multilineTextAlignment(.center)
 
-                    Spacer().frame(height: 25)
+//                    Spacer().frame(height: 25)
 
                     Button {
                         print("aiii papai cliquei")
@@ -58,10 +64,9 @@ struct DailyChallengeView: View {
                                 .foregroundColor(.white)
                         }
                     }
-                    Spacer().frame(height: 25)
+//                    Spacer().frame(height: 25)
                     Button {
                         print("aiii papai cliquei")
-
                     } label: {
 
                         ZStack{
@@ -83,11 +88,16 @@ struct DailyChallengeView: View {
                                 .font(Font.custom("Comfortaa-Bold", size: 20))
                                 .foregroundColor(Color("CTA"))
                         }
+                        .onTapGesture {
+                            showSheet = true
+                        }
+                        .sheet(isPresented: $showSheet) {
+                            ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+                        }
                     }
-                    Spacer().frame(height: 120)
                 }
-            }
-        }
+            }.ignoresSafeArea(.all)
+        }.accentColor(Color("CTA"))
     }
 }
 

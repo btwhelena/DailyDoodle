@@ -10,12 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            ZStack{
+            ZStack {
                 Color("Background").ignoresSafeArea()
                     VStack {
                         Elements()
+                            .frame(maxWidth: .infinity, alignment: .top)
+
                         Text("Desafio de Hoje")
                             .frame(maxWidth: 330, alignment: .leading)
+                            .padding(.top, 30)
                             .font(Font.custom("Comfortaa-Bold", size: 28))
                             .multilineTextAlignment(.leading)
 
@@ -48,11 +51,11 @@ struct ContentView: View {
                             }
                         Text("Galeria")
                             .frame(maxWidth: 330, alignment: .leading)
-                        // .offset(x: -110)
+                            .padding(.top, 30)
                             .font(Font.custom("Comfortaa-Bold", size: 28))
                             .multilineTextAlignment(.leading)
                         GalleryPreviews().frame(maxWidth: 330, alignment: .leading)
-                    }
+                    }.ignoresSafeArea(.all)
             }
         }.accentColor(Color("CTA"))
         }

@@ -7,28 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D6B013B299BB84A00B34135 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B0139299BB84A00B34135 /* Comfortaa-Regular.ttf */; };
-		0D6B013C299BB84A00B34135 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B013A299BB84A00B34135 /* Comfortaa-Bold.ttf */; };
 		0D6B013E299BCABD00B34135 /* GalleryPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B013D299BCABD00B34135 /* GalleryPreviews.swift */; };
 		0D6B0140299D131400B34135 /* DailyChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B013F299D131400B34135 /* DailyChallengeView.swift */; };
+		0D6B0144299E574E00B34135 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B0142299E568B00B34135 /* Comfortaa-Bold.ttf */; };
+		0D6B0145299E574E00B34135 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B0143299E56A000B34135 /* Comfortaa-Regular.ttf */; };
+		0D6B0147299E62FF00B34135 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B0146299E62FF00B34135 /* ImagePicker.swift */; };
 		0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */; };
 		0DA7958E299A7B18003CA2AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958D299A7B18003CA2AC /* ContentView.swift */; };
 		0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA7958F299A7B19003CA2AC /* Assets.xcassets */; };
 		0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */; };
-		0DA7959B299BA73E003CA2AC /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7959A299BA73E003CA2AC /* Elements.swift */; };
+		0DA7959B299BA73E003CA2AC /* ElementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7959A299BA73E003CA2AC /* ElementsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D6B0139299BB84A00B34135 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
-		0D6B013A299BB84A00B34135 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
 		0D6B013D299BCABD00B34135 /* GalleryPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPreviews.swift; sourceTree = "<group>"; };
 		0D6B013F299D131400B34135 /* DailyChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeView.swift; sourceTree = "<group>"; };
+		0D6B0142299E568B00B34135 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		0D6B0143299E56A000B34135 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		0D6B0146299E62FF00B34135 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0DA79588299A7B18003CA2AC /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
 		0DA7958D299A7B18003CA2AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0DA7958F299A7B19003CA2AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0DA7959A299BA73E003CA2AC /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		0DA7959A299BA73E003CA2AC /* ElementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,13 +44,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D6B0138299BB84A00B34135 /* Fonts */ = {
+		0D6B0141299E565900B34135 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0D6B0139299BB84A00B34135 /* Comfortaa-Regular.ttf */,
-				0D6B013A299BB84A00B34135 /* Comfortaa-Bold.ttf */,
+				0D6B0142299E568B00B34135 /* Comfortaa-Bold.ttf */,
+				0D6B0143299E56A000B34135 /* Comfortaa-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0D6B0148299E6AE400B34135 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D6B013F299D131400B34135 /* DailyChallengeView.swift */,
+				0DA7959A299BA73E003CA2AC /* ElementsView.swift */,
+				0DA7958D299A7B18003CA2AC /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D6B0149299E6B1600B34135 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0D6B013D299BCABD00B34135 /* GalleryPreviews.swift */,
+				0D6B0146299E62FF00B34135 /* ImagePicker.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		0DA7957F299A7B18003CA2AC = {
@@ -71,12 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */,
-				0D6B013D299BCABD00B34135 /* GalleryPreviews.swift */,
-				0DA7958D299A7B18003CA2AC /* ContentView.swift */,
-				0D6B013F299D131400B34135 /* DailyChallengeView.swift */,
-				0DA7959A299BA73E003CA2AC /* Elements.swift */,
-				0D6B0138299BB84A00B34135 /* Fonts */,
+				0D6B0149299E6B1600B34135 /* Utils */,
+				0D6B0148299E6AE400B34135 /* View */,
 				0DA7958F299A7B19003CA2AC /* Assets.xcassets */,
+				0D6B0141299E565900B34135 /* Fonts */,
 				0DA79591299A7B19003CA2AC /* Preview Content */,
 			);
 			path = DailyDoodle;
@@ -149,9 +168,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D6B013C299BB84A00B34135 /* Comfortaa-Bold.ttf in Resources */,
+				0D6B0144299E574E00B34135 /* Comfortaa-Bold.ttf in Resources */,
+				0D6B0145299E574E00B34135 /* Comfortaa-Regular.ttf in Resources */,
 				0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */,
-				0D6B013B299BB84A00B34135 /* Comfortaa-Regular.ttf in Resources */,
 				0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,8 +206,9 @@
 				0D6B0140299D131400B34135 /* DailyChallengeView.swift in Sources */,
 				0DA7958E299A7B18003CA2AC /* ContentView.swift in Sources */,
 				0D6B013E299BCABD00B34135 /* GalleryPreviews.swift in Sources */,
+				0D6B0147299E62FF00B34135 /* ImagePicker.swift in Sources */,
 				0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */,
-				0DA7959B299BA73E003CA2AC /* Elements.swift in Sources */,
+				0DA7959B299BA73E003CA2AC /* ElementsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
