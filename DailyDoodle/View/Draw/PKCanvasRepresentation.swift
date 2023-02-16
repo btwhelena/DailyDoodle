@@ -15,9 +15,9 @@ struct PKCanvasRepresentation: UIViewRepresentable {
     @State var tool = PKToolPicker()
 
     func makeUIView(context: Context) -> PKCanvasView {
-        canvas.drawingPolicy = .anyInput;
+        canvas.drawingPolicy = .anyInput
         showTools()
-        return canvas;
+        return canvas
     }
 
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
@@ -26,13 +26,14 @@ struct PKCanvasRepresentation: UIViewRepresentable {
     func shareDrawing() {
         let image = canvas.drawing.image(from: canvas.bounds, scale: UIScreen.main.scale)
         let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(activityVC,
+                                    animated: true,
+                                    completion: nil)
     }
 
     func finishChallenge() {
         let image = canvas.drawing.image(from: canvas.bounds, scale: UIScreen.main.scale)
     }
-    
 }
 
 private extension PKCanvasRepresentation {

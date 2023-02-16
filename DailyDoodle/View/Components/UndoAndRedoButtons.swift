@@ -9,7 +9,6 @@ import SwiftUI
 
 struct UndoAndRedoButtons: View {
     @Environment(\.undoManager) private var undoManager
-    
     var body: some View {
 
         HStack {

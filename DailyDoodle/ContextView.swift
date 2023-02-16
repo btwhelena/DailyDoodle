@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  DailyDoodle
-//
-//  Created by Helena Oliveira on 13/02/23.
-//
-
 import SwiftUI
 import PencilKit
 

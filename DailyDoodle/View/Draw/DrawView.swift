@@ -10,7 +10,6 @@ import PencilKit
 struct DrawView: View {
     @State private var isImageFullScreen = false
     @Binding var canvasView: PKCanvasRepresentation
-    
     var body: some View {
         VStack {
             Button(action: {isImageFullScreen.toggle()}) {

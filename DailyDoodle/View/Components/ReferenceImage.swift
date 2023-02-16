@@ -15,7 +15,6 @@ struct ReferenceImage: View {
 
     var body: some View {
         if let image {
-            
             Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
