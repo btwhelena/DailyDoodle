@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */; };
-		0DA7958E299A7B18003CA2AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958D299A7B18003CA2AC /* ContentView.swift */; };
 		0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA7958F299A7B19003CA2AC /* Assets.xcassets */; };
 		0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */; };
+		D63C9AC3299BB6C2008058B8 /* DailyDoodleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D63C9AC1299BB6C2008058B8 /* DailyDoodleModel.xcdatamodeld */; };
+		D63C9AC5299BB71F008058B8 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63C9AC4299BB71F008058B8 /* Drawing.swift */; };
+		D63C9AC8299BB85F008058B8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63C9AC7299BB85F008058B8 /* Persistence.swift */; };
+		D64750C6299E5DF6003D6CC3 /* GalleryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0DA79588299A7B18003CA2AC /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
-		0DA7958D299A7B18003CA2AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0DA7958F299A7B19003CA2AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D63C9AC2299BB6C2008058B8 /* DailyDoodleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyDoodleModel.xcdatamodel; sourceTree = "<group>"; };
+		D63C9AC4299BB71F008058B8 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Drawing.swift; path = ../../../../../../Drawing.swift; sourceTree = "<group>"; };
+		D63C9AC6299BB822008058B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D63C9AC7299BB85F008058B8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = ../../../../../../Persistence.swift; sourceTree = "<group>"; };
+		D63C9AC9299BB88F008058B8 /* DailyDoodleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodleRelease.entitlements; sourceTree = "<group>"; };
+		D63C9ACA299BBA20008058B8 /* DailyDoodleModelV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyDoodleModelV2.xcdatamodel; sourceTree = "<group>"; };
+		D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +60,13 @@
 		0DA7958A299A7B18003CA2AC /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				D63C9AC9299BB88F008058B8 /* DailyDoodleRelease.entitlements */,
+				D63C9AC6299BB822008058B8 /* Info.plist */,
 				0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */,
-				0DA7958D299A7B18003CA2AC /* ContentView.swift */,
+				D63C9AC0299BB6A4008058B8 /* CoreData_ICloud */,
 				0DA7958F299A7B19003CA2AC /* Assets.xcassets */,
 				0DA79591299A7B19003CA2AC /* Preview Content */,
+				D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */,
 			);
 			path = DailyDoodle;
 			sourceTree = "<group>";
@@ -65,6 +77,16 @@
 				0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D63C9AC0299BB6A4008058B8 /* CoreData_ICloud */ = {
+			isa = PBXGroup;
+			children = (
+				D63C9AC1299BB6C2008058B8 /* DailyDoodleModel.xcdatamodeld */,
+				D63C9AC7299BB85F008058B8 /* Persistence.swift */,
+				D63C9AC4299BB71F008058B8 /* Drawing.swift */,
+			);
+			path = CoreData_ICloud;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA7958E299A7B18003CA2AC /* ContentView.swift in Sources */,
+				D63C9AC5299BB71F008058B8 /* Drawing.swift in Sources */,
+				D64750C6299E5DF6003D6CC3 /* GalleryScreenView.swift in Sources */,
+				D63C9AC3299BB6C2008058B8 /* DailyDoodleModel.xcdatamodeld in Sources */,
 				0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */,
+				D63C9AC8299BB85F008058B8 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +295,7 @@
 				DEVELOPMENT_TEAM = 239MK3D5Y2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = DailyDoodle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -293,13 +318,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyDoodle/DailyDoodleRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyDoodle/Preview Content\"";
-				DEVELOPMENT_TEAM = 239MK3D5Y2;
+				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = DailyDoodle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -339,6 +365,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D63C9AC1299BB6C2008058B8 /* DailyDoodleModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D63C9ACA299BBA20008058B8 /* DailyDoodleModelV2.xcdatamodel */,
+				D63C9AC2299BB6C2008058B8 /* DailyDoodleModel.xcdatamodel */,
+			);
+			currentVersion = D63C9AC2299BB6C2008058B8 /* DailyDoodleModel.xcdatamodel */;
+			name = DailyDoodleModel.xcdatamodeld;
+			path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/DailyDoodle/DailyDoodle/DailyDoodleModel.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0DA79580299A7B18003CA2AC /* Project object */;
 }

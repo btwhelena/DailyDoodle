@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct DailyDoodleApp: App {
+
+    let persistenceContainer = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GalleryScreenView()
+                .environment(\.managedObjectContext, persistenceContainer.container.viewContext)
         }
     }
 }
