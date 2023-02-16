@@ -10,6 +10,13 @@
 		0D6B013B299BB84A00B34135 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B0139299BB84A00B34135 /* Comfortaa-Regular.ttf */; };
 		0D6B013C299BB84A00B34135 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B013A299BB84A00B34135 /* Comfortaa-Bold.ttf */; };
 		0D6B013E299BCABD00B34135 /* GalleryPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B013D299BCABD00B34135 /* GalleryPreviews.swift */; };
+		0B0BD338299BB1F400268D44 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD337299BB1F400268D44 /* DrawView.swift */; };
+		0B0BD33A299BB95100268D44 /* PKCanvasRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD339299BB95100268D44 /* PKCanvasRepresentation.swift */; };
+		0B0BD33D299BC58500268D44 /* ReferenceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD33C299BC58500268D44 /* ReferenceImage.swift */; };
+		0B0BD340299BC9DA00268D44 /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD33F299BC9DA00268D44 /* ZoomableScrollView.swift */; };
+		0B0BD342299BC9F800268D44 /* FullPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD341299BC9F800268D44 /* FullPictureView.swift */; };
+		0B0BD344299BCA5A00268D44 /* FullScreenModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD343299BCA5900268D44 /* FullScreenModalView.swift */; };
+		0B0BD346299D134800268D44 /* UndoAndRedoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD345299D134800268D44 /* UndoAndRedoButtons.swift */; };
 		0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */; };
 		0DA7958E299A7B18003CA2AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958D299A7B18003CA2AC /* ContentView.swift */; };
 		0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA7958F299A7B19003CA2AC /* Assets.xcassets */; };
@@ -21,6 +28,13 @@
 		0D6B0139299BB84A00B34135 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 		0D6B013A299BB84A00B34135 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
 		0D6B013D299BCABD00B34135 /* GalleryPreviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPreviews.swift; sourceTree = "<group>"; };
+		0B0BD337299BB1F400268D44 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		0B0BD339299BB95100268D44 /* PKCanvasRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvasRepresentation.swift; sourceTree = "<group>"; };
+		0B0BD33C299BC58500268D44 /* ReferenceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceImage.swift; sourceTree = "<group>"; };
+		0B0BD33F299BC9DA00268D44 /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
+		0B0BD341299BC9F800268D44 /* FullPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPictureView.swift; sourceTree = "<group>"; };
+		0B0BD343299BCA5900268D44 /* FullScreenModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenModalView.swift; sourceTree = "<group>"; };
+		0B0BD345299D134800268D44 /* UndoAndRedoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoAndRedoButtons.swift; sourceTree = "<group>"; };
 		0DA79588299A7B18003CA2AC /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
 		0DA7958D299A7B18003CA2AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +63,44 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		0B0BD335299BB12F00268D44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B0BD33B299BC56100268D44 /* Components */,
+				0B0BD336299BB13A00268D44 /* Draw */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B0BD336299BB13A00268D44 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				0B0BD337299BB1F400268D44 /* DrawView.swift */,
+				0B0BD339299BB95100268D44 /* PKCanvasRepresentation.swift */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
+		0B0BD33B299BC56100268D44 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0B0BD33E299BC9C300268D44 /* PictureView */,
+				0B0BD33C299BC58500268D44 /* ReferenceImage.swift */,
+				0B0BD345299D134800268D44 /* UndoAndRedoButtons.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0B0BD33E299BC9C300268D44 /* PictureView */ = {
+			isa = PBXGroup;
+			children = (
+				0B0BD33F299BC9DA00268D44 /* ZoomableScrollView.swift */,
+				0B0BD341299BC9F800268D44 /* FullPictureView.swift */,
+				0B0BD343299BCA5900268D44 /* FullScreenModalView.swift */,
+			);
+			path = PictureView;
+			sourceTree = "<group>";
+		};
 		0DA7957F299A7B18003CA2AC = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +120,7 @@
 		0DA7958A299A7B18003CA2AC /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				0B0BD335299BB12F00268D44 /* View */,
 				0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */,
 				0D6B013D299BCABD00B34135 /* GalleryPreviews.swift */,
 				0DA7958D299A7B18003CA2AC /* ContentView.swift */,
@@ -180,10 +233,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0BD33A299BB95100268D44 /* PKCanvasRepresentation.swift in Sources */,
 				0DA7958E299A7B18003CA2AC /* ContentView.swift in Sources */,
 				0D6B013E299BCABD00B34135 /* GalleryPreviews.swift in Sources */,
 				0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */,
 				0DA7959B299BA73E003CA2AC /* Elements.swift in Sources */,
+				0B0BD338299BB1F400268D44 /* DrawView.swift in Sources */,
+				0B0BD340299BC9DA00268D44 /* ZoomableScrollView.swift in Sources */,
+				0B0BD346299D134800268D44 /* UndoAndRedoButtons.swift in Sources */,
+				0B0BD342299BC9F800268D44 /* FullPictureView.swift in Sources */,
+				0B0BD33D299BC58500268D44 /* ReferenceImage.swift in Sources */,
+				0B0BD344299BCA5A00268D44 /* FullScreenModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyDoodle/Preview Content\"";
-				DEVELOPMENT_TEAM = 239MK3D5Y2;
+				DEVELOPMENT_TEAM = KDV83NBV8H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyDoodle/Info.plist;
@@ -343,7 +403,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyDoodle/Preview Content\"";
-				DEVELOPMENT_TEAM = 239MK3D5Y2;
+				DEVELOPMENT_TEAM = KDV83NBV8H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyDoodle/Info.plist;
