@@ -13,6 +13,7 @@ struct DailyChallengeView: View {
     @State private var showSheet = false
     @State var isActive = false
     @State var canvasView = PKCanvasRepresentation()
+    @StateObject var persistence = PersistenceController.shared
 
     var body: some View {
 //        NavigationView {
@@ -63,7 +64,10 @@ struct DailyChallengeView: View {
                                     Button(action: canvasView.shareDrawing, label: {
                                         Image(systemName: "square.and.arrow.up")
                                     })
-                                    Button(action: canvasView.finishChallenge, label: {
+                                    Button(
+                                        action: persistence.addDraw,//canvasView.finishChallenge,
+                                        label:
+                                            {
                                         Image(systemName: "checkmark.circle.fill")
                                     })
                                 }

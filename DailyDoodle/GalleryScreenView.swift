@@ -25,7 +25,7 @@ struct CardView: View {
 
 struct GalleryScreenView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @StateObject var persistence = PersistenceController.shared
+//    @StateObject var persistence = PersistenceController.shared
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Drawing.date, ascending: false)])
     var draws: FetchedResults<Drawing>
 
@@ -33,15 +33,15 @@ struct GalleryScreenView: View {
         NavigationView {
             DrawsView(results: draws)
                 .navigationTitle("Galeria")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Add") {
-                            print("Add tapped!")
-                            persistence.addDraw()
-
-                        }
-                    }
-                }
+//                .toolbar {
+//                    ToolbarItem(placement: .navigationBarTrailing) {
+//                        Button("Add") {
+//                            print("Add tapped!")
+//                            persistence.addDraw()
+//
+//                        }
+//                    }
+//                }
         }
     }
 }

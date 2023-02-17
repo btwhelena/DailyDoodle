@@ -48,13 +48,13 @@ class PersistenceController: ObservableObject {
             newDraw.challenge = "New Draw \(Date())"
             newDraw.date = Date()
 
-            doawloadImage()
+            downloadImage()
 
             saveContext()
         }
     }
 
-    private func doawloadImage(){
+    private func downloadImage(){
         let url =  URL(string: "https://picsum.photos/200/300\(UUID().uuidString)")!
 
         URLSession.shared.dataTask(with: url) { data, _, error in
