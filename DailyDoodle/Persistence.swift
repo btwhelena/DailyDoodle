@@ -1,5 +1,3 @@
-
-
 import Foundation
 import SwiftUI
 import UIKit
@@ -97,7 +95,7 @@ class CoreDataManager {
 //            draw.challenge = "Teste"
 //            draw.date = Date()
 //            draw.imagJPEG = UIImage(data: data)
-//            
+//
 //        }
 //    }
 //}
