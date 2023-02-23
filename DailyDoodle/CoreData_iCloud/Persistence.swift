@@ -1,71 +1,104 @@
-//
-//  Persistence.swift
-//  DailyDoodle
-//
-//  Created by Ieda Xavier on 14/02/23.
-//
 
 
 import Foundation
 import SwiftUI
+import UIKit
 import CoreData
 
-class PersistenceController: ObservableObject {
-    static let shared = PersistenceController()
-    let container: NSPersistentContainer
-    var draws: [Drawing] = []
+class CoreDataManager {
+    let persistentContainer: NSPersistentCloudKitContainer
+    static let shared: CoreDataManager = CoreDataManager()
 
-    init() {
-        container = NSPersistentCloudKitContainer(name: "DailyDoodleModel")
-        container.loadPersistentStores { storeDescription, error in
-            if let error = error as NSError? {
-                fatalError("Unresolved error: \(error)")
+    private init() {
+
+        ValueTransformer.setValueTransformer(UIImageTransformer(), forName: NSValueTransformerName("UIImageTransformer"))
+
+        persistentContainer = NSPersistentCloudKitContainer(name: "DailyDoodleModel")
+        persistentContainer.loadPersistentStores { description, error in
+            if let error = error {
+                fatalError("Unable to initialize CoreData \(error)")
             }
         }
-        container.viewContext.automaticallyMergesChangesFromParent = true
-        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+
+        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+        persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
     }
 
-    func deleteDraw(offsets: IndexSet){
-        withAnimation {
-            offsets.map {draws [$0]}.forEach(self.container.viewContext.delete)
-            saveContext()
-        }
-    }
+    func saveContext(){
+        let context = persistentContainer.viewContext
 
-    private func saveContext(){
-        do {
-            try self.container.viewContext .save()
-        } catch {
-            let error = error as NSError
-            fatalError("Unresolved Error: \(error)")
-        }
-    }
+            if context.hasChanges{
+            do {
+                try context.save()
 
-    func addDraw() {
-        withAnimation {
-            let newDraw = Drawing(context: self.container.viewContext)
-            newDraw.challenge = "New Draw \(Date())"
-            newDraw.date = Date()
-
-            downloadImage()
-
-            saveContext()
-        }
-    }
-
-    private func downloadImage(){
-        let url =  URL(string: "https://picsum.photos/200/300\(UUID().uuidString)")!
-
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data, error == nil else {
-                return
+            } catch {
+                let error = error as NSError
+                fatalError("Unresolved Error: \(error.localizedDescription), \(error.userInfo)")
             }
-
-            let draw = Drawing(context: self.container.viewContext)
-            draw.challenge = "Teste"
-            draw.date = Date()
-            draw.imagJPEG = UIImage(data: data)
         }
     }
 }
+
+//
+//class PersistenceController: ObservableObject {
+//    static let shared = PersistenceController()
+//    let container: NSPersistentContainer
+//    var draws: [Drawing] = []
+////
+//    init() {
+//        container = NSPersistentCloudKitContainer(name: "DailyDoodleModel")
+//        container.loadPersistentStores { storeDescription, error in
+//            if let error = error as NSError? {
+//                fatalError("Unresolved error: \(error)")
+//            }
+//        }
+//        container.viewContext.automaticallyMergesChangesFromParent = true
+//        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+//    }
+//
+//    func deleteDraw(offsets: IndexSet){
+//        withAnimation {
+//            offsets.map {draws [$0]}.forEach(self.container.viewContext.delete)
+//            saveContext()
+//        }
+//    }
+//
+//    private func saveContext(){
+//        do {
+//            try self.container.viewContext.save()
+//
+//        } catch {
+//            let error = error as NSError
+//            fatalError("Unresolved Error: \(error.localizedDescription), \(error.userInfo)")
+//        }
+//    }
+//
+//    func addDraw(image: UIImage) {
+//
+//        let newDraw = Drawing(context: self.container.viewContext)
+//        newDraw.challenge = "New Draw \(Date())"
+//        newDraw.date = Date()
+//
+//        downloadImage()
+//
+//        saveContext()
+//
+//    }
+//
+//    private func downloadImage(){
+//        let url =  URL(string: "https://picsum.photos/200/300\(UUID().uuidString)")!
+//
+//        URLSession.shared.dataTask(with: url) { data, _, error in
+//            guard let data = data, error == nil else {
+//                return
+//            }
+//
+//            let draw = Drawing(context: self.container.viewContext)
+//            draw.challenge = "Teste"
+//            draw.date = Date()
+//            draw.imagJPEG = UIImage(data: data)
+//            
+//        }
+//    }
+//}
+//

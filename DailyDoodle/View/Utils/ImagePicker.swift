@@ -32,6 +32,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 
     final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+        @State var drawVM = DrawViewModel()
         var parent: ImagePicker
 
         init(_ parent: ImagePicker) {
@@ -42,6 +43,7 @@ struct ImagePicker: UIViewControllerRepresentable {
 
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                 parent.selectedImage = image
+                drawVM.downloadImage(image: image)
             }
 
             parent.presentationMode.wrappedValue.dismiss()
