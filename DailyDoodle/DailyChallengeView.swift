@@ -15,7 +15,6 @@ struct DailyChallengeView: View {
     @State var canvasView = PKCanvasRepresentation()
 
     var body: some View {
-//        NavigationView {
             ZStack {
                 Color("Background").ignoresSafeArea()
 
@@ -39,7 +38,6 @@ struct DailyChallengeView: View {
                         .cornerRadius(15)
                         .clipShape(Rectangle())
 
-//                    Spacer().frame(height: 25)
 
                     Text("Tente desenhar a imagem de referência acima ou escolha um desenho da sua galeria.")
                         .frame(maxWidth: 330, alignment: .center)
@@ -48,7 +46,7 @@ struct DailyChallengeView: View {
                         .font(Font.custom("Comfortaa-Regular", fixedSize: 24))
                         .multilineTextAlignment(.center)
 
-//                    Spacer().frame(height: 25)
+
                     NavigationLink(destination:
                                     DrawView(canvasView: $canvasView)
                         .toolbar {
@@ -63,7 +61,10 @@ struct DailyChallengeView: View {
                                     Button(action: canvasView.shareDrawing, label: {
                                         Image(systemName: "square.and.arrow.up")
                                     })
-                                    Button(action: canvasView.finishChallenge, label: {
+                                    Button(
+                                        action: canvasView.finishChallenge,
+                                        label:
+                                            {
                                         Image(systemName: "checkmark.circle.fill")
                                     })
                                 }
@@ -90,7 +91,6 @@ struct DailyChallengeView: View {
                         }
                     }
 
-//                    Spacer().frame(height: 25)
                     Button {
                         print("aiii papai cliquei")
                     } label: {
@@ -106,8 +106,6 @@ struct DailyChallengeView: View {
                                         .stroke(Color("CTA"), lineWidth: 2)
                                         .background(Rectangle().fill(Color("Background")))
                                         .cornerRadius(35)
-
-
                                     )
 
                             Text("Escolher da galeria")
@@ -123,7 +121,6 @@ struct DailyChallengeView: View {
                     }
                 }
             }.ignoresSafeArea(.all)
-//        }.accentColor(Color("CTA"))
     }
 }
 

@@ -10,11 +10,18 @@ import SwiftUI
 @main
 struct DailyDoodleApp: App {
 
-    let persistenceContainer = PersistenceController.shared
+    let persistenceContainer = CoreDataManager.shared
+
+    @AppStorage("shouldShowOnboarding") var shouldShowOnboarding :Bool = true
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceContainer.container.viewContext)
+            if shouldShowOnboarding {
+                OnboardingView()
+            } else {
+                ContentView()
+                    .environment(\.managedObjectContext, persistenceContainer.persistentContainer.viewContext)
+            }
         }
     }
 }

@@ -14,20 +14,28 @@
 		0B0BD342299BC9F800268D44 /* FullPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD341299BC9F800268D44 /* FullPictureView.swift */; };
 		0B0BD344299BCA5A00268D44 /* FullScreenModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD343299BCA5900268D44 /* FullScreenModalView.swift */; };
 		0B0BD346299D134800268D44 /* UndoAndRedoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD345299D134800268D44 /* UndoAndRedoButtons.swift */; };
-		0B0BD363299E6D9E00268D44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD362299E6D9E00268D44 /* ContentView.swift */; };
 		0B0BD367299E6DD300268D44 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD365299E6DD300268D44 /* Persistence.swift */; };
 		0B0BD368299E6DD300268D44 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD366299E6DD300268D44 /* Drawing.swift */; };
 		0B0BD36B299E6DF800268D44 /* DailyDoodleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD369299E6DF800268D44 /* DailyDoodleModel.xcdatamodeld */; };
 		0B0BD36F299E718000268D44 /* GalleryPreviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD36E299E718000268D44 /* GalleryPreviews.swift */; };
 		0B0BD371299E718200268D44 /* ElementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD370299E718200268D44 /* ElementsView.swift */; };
 		0D6B0140299D131400B34135 /* DailyChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B013F299D131400B34135 /* DailyChallengeView.swift */; };
-		0D6B0144299E574E00B34135 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B0142299E568B00B34135 /* Comfortaa-Bold.ttf */; };
-		0D6B0145299E574E00B34135 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B0143299E56A000B34135 /* Comfortaa-Regular.ttf */; };
 		0D6B0147299E62FF00B34135 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B0146299E62FF00B34135 /* ImagePicker.swift */; };
 		0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */; };
 		0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA7958F299A7B19003CA2AC /* Assets.xcassets */; };
 		0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */; };
 		D64750C6299E5DF6003D6CC3 /* GalleryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */; };
+		D65AC56229A15B6E00F91B85 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56129A15B6E00F91B85 /* OnboardingView.swift */; };
+		D65AC56529A15F2800F91B85 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56429A15F2800F91B85 /* FirstPage.swift */; };
+		D65AC56729A15F3300F91B85 /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56629A15F3300F91B85 /* SecondPage.swift */; };
+		D65AC56929A15F5B00F91B85 /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56829A15F5B00F91B85 /* ThirdPage.swift */; };
+		D65AC56C29A1714000F91B85 /* LocalNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56B29A1714000F91B85 /* LocalNotificationModel.swift */; };
+		D65AC56E29A1716600F91B85 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56D29A1716600F91B85 /* LocalNotificationManager.swift */; };
+		D6AE08E029A12DBD00B954D4 /* DrawsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE08DF29A12DBC00B954D4 /* DrawsViewModel.swift */; };
+		D6AE08E229A12E8100B954D4 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE08E129A12E8100B954D4 /* UIImageTransformer.swift */; };
+		D6AEA2C229A2536400FBE1C0 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6AEA2C029A2536400FBE1C0 /* Comfortaa-Bold.ttf */; };
+		D6AEA2C329A2536400FBE1C0 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6AEA2C129A2536400FBE1C0 /* Comfortaa-Regular.ttf */; };
+		D6E66F88299E74AD00532219 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E66F87299E74AD00532219 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,15 +46,12 @@
 		0B0BD341299BC9F800268D44 /* FullPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPictureView.swift; sourceTree = "<group>"; };
 		0B0BD343299BCA5900268D44 /* FullScreenModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenModalView.swift; sourceTree = "<group>"; };
 		0B0BD345299D134800268D44 /* UndoAndRedoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoAndRedoButtons.swift; sourceTree = "<group>"; };
-		0B0BD362299E6D9E00268D44 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../Downloads/ContentView.swift; sourceTree = "<group>"; };
 		0B0BD365299E6DD300268D44 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0B0BD366299E6DD300268D44 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		0B0BD36A299E6DF800268D44 /* DailyDoodleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyDoodleModel.xcdatamodel; sourceTree = "<group>"; };
 		0B0BD36E299E718000268D44 /* GalleryPreviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPreviews.swift; sourceTree = "<group>"; };
 		0B0BD370299E718200268D44 /* ElementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsView.swift; sourceTree = "<group>"; };
 		0D6B013F299D131400B34135 /* DailyChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeView.swift; sourceTree = "<group>"; };
-		0D6B0142299E568B00B34135 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
-		0D6B0143299E56A000B34135 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 		0D6B0146299E62FF00B34135 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0DA79588299A7B18003CA2AC /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
@@ -55,6 +60,17 @@
 		D63C9AC6299BB822008058B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D63C9AC9299BB88F008058B8 /* DailyDoodleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodleRelease.entitlements; sourceTree = "<group>"; };
 		D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreenView.swift; sourceTree = "<group>"; };
+		D65AC56129A15B6E00F91B85 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D65AC56429A15F2800F91B85 /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		D65AC56629A15F3300F91B85 /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
+		D65AC56829A15F5B00F91B85 /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
+		D65AC56B29A1714000F91B85 /* LocalNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationModel.swift; sourceTree = "<group>"; };
+		D65AC56D29A1716600F91B85 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		D6AE08DF29A12DBC00B954D4 /* DrawsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrawsViewModel.swift; path = DailyDoodle/CoreData_ICloud/DrawsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		D6AE08E129A12E8100B954D4 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageTransformer.swift; path = DailyDoodle/CoreData_ICloud/UIImageTransformer.swift; sourceTree = SOURCE_ROOT; };
+		D6AEA2C029A2536400FBE1C0 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		D6AEA2C129A2536400FBE1C0 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Regular.ttf"; path = "../../../../../../Downloads/Comfortaa (1)/static/Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		D6E66F87299E74AD00532219 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../../../Downloads/ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +87,8 @@
 		0B0BD335299BB12F00268D44 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D65AC56029A15B5200F91B85 /* Onboarding */,
 				0D6B0149299E6B1600B34135 /* Utils */,
-				0D6B013F299D131400B34135 /* DailyChallengeView.swift */,
 				0B0BD33B299BC56100268D44 /* Components */,
 				0B0BD336299BB13A00268D44 /* Draw */,
 			);
@@ -113,6 +129,8 @@
 			children = (
 				0B0BD366299E6DD300268D44 /* Drawing.swift */,
 				0B0BD365299E6DD300268D44 /* Persistence.swift */,
+				D6AE08DF29A12DBC00B954D4 /* DrawsViewModel.swift */,
+				D6AE08E129A12E8100B954D4 /* UIImageTransformer.swift */,
 				0B0BD369299E6DF800268D44 /* DailyDoodleModel.xcdatamodeld */,
 			);
 			path = CoreData_iCloud;
@@ -121,8 +139,8 @@
 		0D6B0138299BB84A00B34135 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0D6B0142299E568B00B34135 /* Comfortaa-Bold.ttf */,
-				0D6B0143299E56A000B34135 /* Comfortaa-Regular.ttf */,
+				D6AEA2C029A2536400FBE1C0 /* Comfortaa-Bold.ttf */,
+				D6AEA2C129A2536400FBE1C0 /* Comfortaa-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -154,12 +172,14 @@
 		0DA7958A299A7B18003CA2AC /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				D65AC56A29A1711000F91B85 /* LocalNotificationManager */,
 				0B0BD364299E6DB200268D44 /* CoreData_iCloud */,
-				0B0BD362299E6D9E00268D44 /* ContentView.swift */,
 				0B0BD335299BB12F00268D44 /* View */,
 				D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */,
 				0B0BD36E299E718000268D44 /* GalleryPreviews.swift */,
 				0B0BD370299E718200268D44 /* ElementsView.swift */,
+				0D6B013F299D131400B34135 /* DailyChallengeView.swift */,
+				D6E66F87299E74AD00532219 /* ContentView.swift */,
 				0D6B0138299BB84A00B34135 /* Fonts */,
 				D63C9AC9299BB88F008058B8 /* DailyDoodleRelease.entitlements */,
 				D63C9AC6299BB822008058B8 /* Info.plist */,
@@ -176,6 +196,34 @@
 				0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D65AC56029A15B5200F91B85 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D65AC56129A15B6E00F91B85 /* OnboardingView.swift */,
+				D65AC56329A15F1600F91B85 /* ContainerOnboarding */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D65AC56329A15F1600F91B85 /* ContainerOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D65AC56429A15F2800F91B85 /* FirstPage.swift */,
+				D65AC56629A15F3300F91B85 /* SecondPage.swift */,
+				D65AC56829A15F5B00F91B85 /* ThirdPage.swift */,
+			);
+			path = ContainerOnboarding;
+			sourceTree = "<group>";
+		};
+		D65AC56A29A1711000F91B85 /* LocalNotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				D65AC56B29A1714000F91B85 /* LocalNotificationModel.swift */,
+				D65AC56D29A1716600F91B85 /* LocalNotificationManager.swift */,
+			);
+			path = LocalNotificationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D6B0144299E574E00B34135 /* Comfortaa-Bold.ttf in Resources */,
-				0D6B0145299E574E00B34135 /* Comfortaa-Regular.ttf in Resources */,
+				D6AEA2C329A2536400FBE1C0 /* Comfortaa-Regular.ttf in Resources */,
 				0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */,
 				0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */,
+				D6AEA2C229A2536400FBE1C0 /* Comfortaa-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,22 +322,30 @@
 			files = (
 				0B0BD36B299E6DF800268D44 /* DailyDoodleModel.xcdatamodeld in Sources */,
 				0B0BD33A299BB95100268D44 /* PKCanvasRepresentation.swift in Sources */,
+				D65AC56929A15F5B00F91B85 /* ThirdPage.swift in Sources */,
 				0D6B0140299D131400B34135 /* DailyChallengeView.swift in Sources */,
 				0D6B0147299E62FF00B34135 /* ImagePicker.swift in Sources */,
 				0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */,
 				0B0BD367299E6DD300268D44 /* Persistence.swift in Sources */,
+				D6AE08E029A12DBD00B954D4 /* DrawsViewModel.swift in Sources */,
 				0B0BD338299BB1F400268D44 /* DrawView.swift in Sources */,
+				D65AC56229A15B6E00F91B85 /* OnboardingView.swift in Sources */,
 				0B0BD340299BC9DA00268D44 /* ZoomableScrollView.swift in Sources */,
 				0B0BD346299D134800268D44 /* UndoAndRedoButtons.swift in Sources */,
 				0B0BD36F299E718000268D44 /* GalleryPreviews.swift in Sources */,
 				0B0BD342299BC9F800268D44 /* FullPictureView.swift in Sources */,
 				0B0BD33D299BC58500268D44 /* ReferenceImage.swift in Sources */,
 				0B0BD344299BCA5A00268D44 /* FullScreenModalView.swift in Sources */,
-				0B0BD363299E6D9E00268D44 /* ContentView.swift in Sources */,
+				D65AC56E29A1716600F91B85 /* LocalNotificationManager.swift in Sources */,
 				D64750C6299E5DF6003D6CC3 /* GalleryScreenView.swift in Sources */,
+				D6E66F88299E74AD00532219 /* ContentView.swift in Sources */,
+				D65AC56529A15F2800F91B85 /* FirstPage.swift in Sources */,
 				0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */,
 				0B0BD368299E6DD300268D44 /* Drawing.swift in Sources */,
+				D65AC56C29A1714000F91B85 /* LocalNotificationModel.swift in Sources */,
 				0B0BD371299E718200268D44 /* ElementsView.swift in Sources */,
+				D65AC56729A15F3300F91B85 /* SecondPage.swift in Sources */,
+				D6AE08E229A12E8100B954D4 /* UIImageTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,8 +384,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -388,8 +446,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -418,7 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyDoodle/Preview Content\"";
-				DEVELOPMENT_TEAM = KDV83NBV8H;
+				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyDoodle/Info.plist;
@@ -432,7 +492,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.helena.DailyDoodle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ieda.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -463,7 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.helena.DailyDoodle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iedaXavier.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

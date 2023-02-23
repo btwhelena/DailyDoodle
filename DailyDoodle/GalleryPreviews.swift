@@ -16,20 +16,22 @@ struct GalleryPreviews: View {
     ]
 
     var body: some View {
-        NavigationView {
             ScrollView {
                 LazyVGrid(columns: adaptiveColumns, spacing: 8) {
                     ForEach(data, id: \.self) { number in
                         ZStack {
-                            Rectangle()
-                                .frame(width: 160, height: 120)
-                                .foregroundColor(colors[number%4])
-                                .cornerRadius(15)
+                            NavigationLink {
+                                GalleryScreenView()
+                            } label: {
+                                Rectangle()
+                                    .frame(width: 160, height: 120)
+                                    .foregroundColor(colors[number%4])
+                                    .cornerRadius(15)
+                            }
                         }
                     }
                 }
-            }.navigationBarHidden(true)
-                .background(Color("Background"))
+
         }
     }
 }

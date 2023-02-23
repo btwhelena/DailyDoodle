@@ -10,7 +10,7 @@ import PencilKit
 
 struct PKCanvasRepresentation: UIViewRepresentable {
     var canvas: PKCanvasView = PKCanvasView()
-    //    var previewDrawing: PKDrawing? = nil
+    var drawVM = DrawViewModel()
 
     @State var tool = PKToolPicker()
 
@@ -33,6 +33,8 @@ struct PKCanvasRepresentation: UIViewRepresentable {
 
     func finishChallenge() {
         let image = canvas.drawing.image(from: canvas.bounds, scale: UIScreen.main.scale)
+        drawVM.downloadImage(image: image)
+        
     }
 }
 
