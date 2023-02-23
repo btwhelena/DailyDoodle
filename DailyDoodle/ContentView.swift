@@ -28,7 +28,7 @@ struct ContentView: View {
                             isActive.toggle()
 
                         } label: {
-                            Image("caxorro")
+                            Image("CHALLENGE-\(DateHelper.getCurrentDay())")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 330, height: 200)
