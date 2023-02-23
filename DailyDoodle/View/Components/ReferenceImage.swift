@@ -11,7 +11,7 @@ struct ReferenceImage: View {
     var width: CGFloat = 240
     var height: CGFloat = 160
 
-    @State var image: UIImage? = UIImage(named: "CHALLENGE-1")!
+    @State var image: UIImage? = UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!
 
     var body: some View {
         if let image {

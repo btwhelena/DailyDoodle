@@ -22,6 +22,7 @@
 		0B0BD37B29A787BB00268D44 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD37A29A787BB00268D44 /* Persistence.swift */; };
 		0B0BD37D29A787DE00268D44 /* DrawsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD37C29A787DE00268D44 /* DrawsViewModel.swift */; };
 		0B0BD37F29A7880300268D44 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD37E29A7880300268D44 /* UIImageTransformer.swift */; };
+		0B0BD38429A7B0DC00268D44 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD38329A7B0DC00268D44 /* DateHelper.swift */; };
 		0D6B0140299D131400B34135 /* DailyChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B013F299D131400B34135 /* DailyChallengeView.swift */; };
 		0D6B0147299E62FF00B34135 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B0146299E62FF00B34135 /* ImagePicker.swift */; };
 		0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */; };
@@ -55,6 +56,7 @@
 		0B0BD37E29A7880300268D44 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageTransformer.swift; path = DailyDoodle/UIImageTransformer.swift; sourceTree = SOURCE_ROOT; };
 		0B0BD38029A788A500268D44 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 		0B0BD38129A790EE00268D44 /* DailyDoodle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodle.entitlements; sourceTree = "<group>"; };
+		0B0BD38329A7B0DC00268D44 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		0D6B013F299D131400B34135 /* DailyChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeView.swift; sourceTree = "<group>"; };
 		0D6B0146299E62FF00B34135 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0DA79588299A7B18003CA2AC /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,14 @@
 			path = CoreData_iCloud;
 			sourceTree = "<group>";
 		};
+		0B0BD38229A7B0C800268D44 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0B0BD38329A7B0DC00268D44 /* DateHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		0D6B0138299BB84A00B34135 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		0DA7958A299A7B18003CA2AC /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				0B0BD38229A7B0C800268D44 /* Utils */,
 				0B0BD38129A790EE00268D44 /* DailyDoodle.entitlements */,
 				0B0BD37629A7875600268D44 /* ContentView.swift */,
 				D65AC56A29A1711000F91B85 /* LocalNotificationManager */,
@@ -344,6 +355,7 @@
 				0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */,
 				D65AC56C29A1714000F91B85 /* LocalNotificationModel.swift in Sources */,
 				0B0BD37929A7878D00268D44 /* Drawing.swift in Sources */,
+				0B0BD38429A7B0DC00268D44 /* DateHelper.swift in Sources */,
 				0B0BD371299E718200268D44 /* ElementsView.swift in Sources */,
 				D65AC56729A15F3300F91B85 /* SecondPage.swift in Sources */,
 			);

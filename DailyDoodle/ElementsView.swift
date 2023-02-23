@@ -22,7 +22,7 @@ struct Elements: View {
                     .font(Font.custom("Comfortaa-Bold", size: 28, relativeTo: .title))
                     .frame(maxWidth: .infinity, alignment: .center)
 
-                Text("Carnaval")
+                Text("Animais")
                     .foregroundColor(.white)
                     .font(Font.custom("Comfortaa-Bold", size: 36, relativeTo: .largeTitle))
                     .frame(maxWidth: .infinity, alignment: .center)
