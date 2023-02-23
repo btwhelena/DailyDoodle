@@ -29,18 +29,13 @@ class DrawViewModel: ObservableObject {
     func downloadImage(image: UIImage) {
 
             let draw = Drawing(context: self.context)
-            draw.challenge = "Random Photo"
+            draw.challenge = "carnaval"
             draw.imagJPEG = image
 
             try? self.context.save()
 
     }
 
-    func deleteDraw(offsets: IndexSet){
-          withAnimation {
-              offsets.map {draws [$0]}.forEach(self.context.delete)
-              try? self.context.save()
-          }
-      }
+
 }
 
