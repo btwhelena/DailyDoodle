@@ -17,56 +17,61 @@ struct CardView: View {
 
     @State var isImageFullScreen = false
     @State var canvasView = PKCanvasRepresentation()
+    @State var drawVM = DrawViewModel()
 
 
     var body: some View {
         VStack {
-            Button(action: {isImageFullScreen.toggle()}) {
-                Image(uiImage: draw.imagJPEG!)
-                        .resizable()
-                        .foregroundColor(.accentColor)
-                        .frame(width: UIScreen.main.bounds.width/3.2)
-                        .padding(10)
-
-                Text(draw.challenge!)
-                    .font(.title2)
-            }
-            .fullScreenCover(isPresented: $isImageFullScreen, content: {
+            NavigationLink {
                 FullScreenModalView(image: draw.imagJPEG!)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            HStack{
+                                Button(action: share, label: {
+                                    Image(systemName: "square.and.arrow.up")
+                                })
 
-                HStack {
-                    Button(action: share, label: {
-                        Image(systemName: "square.and.arrow.up")
-                    })
-                }
-            })
+                                Button(action: {drawVM.delete(draw: draw)}, label: {
+                                    Image(systemName: "trash")
+                                })
+                            }
+                        }
+                    }
+            } label: {
+                Image(uiImage: draw.imagJPEG!)
+                    .resizable()
+                    .foregroundColor(.accentColor)
+                    .frame(width: UIScreen.main.bounds.width/3.2)
+                    .padding(10)
+            }
+
         }
     }
 
     func share(){
-        let activityVC = UIActivityViewController(activityItems: [self.draw.imagJPEG], applicationActivities: nil)
+        guard let image = draw.imagJPEG else { return }
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
     }
+
 }
 
 struct GalleryScreenView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Drawing.date, ascending: false)])
     var draws: FetchedResults<Drawing>
+    let challenge: String
 
     var body: some View {
-        NavigationView {
-            DrawsView(results: draws)
-                .navigationTitle("Galeria")
-
-        }
+        DrawsView(results: draws, challenge: challenge)
+            .navigationTitle("Galeria")
     }
 }
 
 struct DrawsView<Results:RandomAccessCollection>: View where Results.Element == Drawing {
-    @State var drawVM = DrawViewModel()
 
     let results: Results
+    let challenge: String
 
     var columns: [GridItem] = [
         GridItem(.flexible(minimum: 140)),
@@ -77,9 +82,12 @@ struct DrawsView<Results:RandomAccessCollection>: View where Results.Element == 
     let height: CGFloat = 150
 
     var body: some View {
+
+        let drawsFiltered = results.filter { $0.challenge!.contains(challenge) }
+
         ScrollView {
             LazyVGrid(columns: columns, spacing: 16) {
-                ForEach(results, id: \.id) { draw in
+                ForEach(drawsFiltered, id: \.self) { draw in
                     if draw.imagJPEG != nil {
                         CardView(draw: draw)
                             .frame(height: height)
@@ -90,4 +98,6 @@ struct DrawsView<Results:RandomAccessCollection>: View where Results.Element == 
 
         }
     }
+
+    
 }

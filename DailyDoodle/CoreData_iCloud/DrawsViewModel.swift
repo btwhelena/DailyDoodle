@@ -18,7 +18,7 @@ class DrawViewModel: ObservableObject {
         let request: NSFetchRequest<Drawing> = NSFetchRequest(entityName: "Drawing")
 
         do {
-            let draws = try context.fetch(request)
+            self.draws = try context.fetch(request)
 
         } catch {
             print(error)
@@ -29,17 +29,21 @@ class DrawViewModel: ObservableObject {
     func downloadImage(image: UIImage) {
 
             let draw = Drawing(context: self.context)
-            draw.challenge = "Random Photo"
+            draw.challenge = "carnaval"
             draw.imagJPEG = image
 
             try? self.context.save()
 
     }
 
-    func deleteDraw(offsets: IndexSet){
-          withAnimation {
-              offsets.map {draws [$0]}.forEach(self.context.delete)
-              try? self.context.save()
-          }
-      }
+    func delete(draw: Drawing) {
+        if let indexDraw = draws.firstIndex(where: {$0.id == draw.id}){
+            draws.remove(at: indexDraw)
+
+            try? self.context.save()
+
+        }
+    }
+
+
 }
