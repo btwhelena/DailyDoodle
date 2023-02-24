@@ -9,47 +9,26 @@ import SwiftUI
 import PencilKit
 
 struct ContentView: View {
-    @State var canvasView = PKCanvasRepresentation()
     @State var isActive = false
 
     var body: some View {
         NavigationView {
-            ZStack {
-                Color("Background").ignoresSafeArea()
+            ZStack{
+                Color("Background")
                 VStack {
                     Elements()
                     Text("Desafio de Hoje")
                         .frame(maxWidth: 330, alignment: .leading)
-                    // .offset(x: -50)
                         .font(Font.custom("Comfortaa-Bold", size: 28))
                         .multilineTextAlignment(.leading)
                     NavigationLink(destination:
-                                    DrawView(canvasView: $canvasView)
-                        .toolbar {
-                            // 1
-                            ToolbarItem(placement: .principal) {
-                                UndoAndRedoButtons()
-                            }
-
-                            ToolbarItem(placement: .navigationBarTrailing) {
-
-                                HStack {
-                                    Button(action: canvasView.shareDrawing, label: {
-                                        Image(systemName: "square.and.arrow.up")
-                                    })
-                                    Button(action: canvasView.finishChallenge, label: {
-                                        Image(systemName: "checkmark.circle.fill")
-                                    })
-                                }
-
-                            }
-                        }
+                                    DailyChallengeView()
                                    , isActive: $isActive) {
                         Button {
                             isActive.toggle()
 
                         } label: {
-                            Image("caxorro")
+                            Image("CHALLENGE-\(DateHelper.getCurrentDay())")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 330, height: 200)
@@ -78,12 +57,12 @@ struct ContentView: View {
                     }
                     Text("Galeria")
                         .frame(maxWidth: 330, alignment: .leading)
-                    // .offset(x: -110)
                         .font(Font.custom("Comfortaa-Bold", size: 28))
                         .multilineTextAlignment(.leading)
                     GalleryPreviews().frame(maxWidth: 330, alignment: .leading)
                 }
             }
+            .ignoresSafeArea()
         }
     }
 }

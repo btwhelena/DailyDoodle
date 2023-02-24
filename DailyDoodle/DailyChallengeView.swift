@@ -31,7 +31,7 @@ struct DailyChallengeView: View {
                         .multilineTextAlignment(.center)
 
 
-                    Image("caxorro")
+                    Image("CHALLENGE-\(DateHelper.getCurrentDay())")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 220, height: 220)
