@@ -18,7 +18,7 @@ class DrawViewModel: ObservableObject {
         let request: NSFetchRequest<Drawing> = NSFetchRequest(entityName: "Drawing")
 
         do {
-            let draws = try context.fetch(request)
+            self.draws = try context.fetch(request)
 
         } catch {
             print(error)
@@ -34,6 +34,15 @@ class DrawViewModel: ObservableObject {
 
             try? self.context.save()
 
+    }
+
+    func delete(draw: Drawing) {
+        if let indexDraw = draws.firstIndex(where: {$0.id == draw.id}){
+            draws.remove(at: indexDraw)
+
+            try? self.context.save()
+
+        }
     }
 
 

@@ -17,6 +17,7 @@ struct CardView: View {
 
     @State var isImageFullScreen = false
     @State var canvasView = PKCanvasRepresentation()
+    @State var drawVM = DrawViewModel()
 
 
     var body: some View {
@@ -30,7 +31,7 @@ struct CardView: View {
                                     Image(systemName: "square.and.arrow.up")
                                 })
 
-                                Button(action: {}, label: {
+                                Button(action: {drawVM.delete(draw: draw)}, label: {
                                     Image(systemName: "trash")
                                 })
                             }
@@ -68,7 +69,6 @@ struct GalleryScreenView: View {
 }
 
 struct DrawsView<Results:RandomAccessCollection>: View where Results.Element == Drawing {
-    @State var drawVM = DrawViewModel()
 
     let results: Results
     let challenge: String
@@ -93,16 +93,11 @@ struct DrawsView<Results:RandomAccessCollection>: View where Results.Element == 
                             .frame(height: height)
                     }
                 }
-//                .onTapGesture {
-//                    delete()
-//                }
             }
             .padding()
 
         }
     }
 
-//    func delete(draw: Drawing) {
-//        if let index
-//    }
+    
 }
