@@ -29,7 +29,7 @@ class DrawViewModel: ObservableObject {
     func downloadImage(image: UIImage) {
 
             let draw = Drawing(context: self.context)
-            draw.challenge = "carnaval"
+            draw.challenge = "Animals"
             draw.imagJPEG = image
 
             try? self.context.save()
@@ -38,8 +38,7 @@ class DrawViewModel: ObservableObject {
 
     func delete(draw: Drawing) {
         if let indexDraw = draws.firstIndex(where: {$0.id == draw.id}){
-            draws.remove(at: indexDraw)
-
+            self.context.delete(draw)
             try? self.context.save()
 
         }

@@ -19,12 +19,12 @@ struct Elements: View {
                 Text("Tema do mês:")
                     .padding(.top, 30)
                     .foregroundColor(.white)
-                    .font(Font.custom("Comfortaa-Bold", size: 28, relativeTo: .title))
+                    .font(Font.custom("Comfortaa-Bold", size: 24, relativeTo: .title))
                     .frame(maxWidth: .infinity, alignment: .center)
 
                 Text("Animais")
                     .foregroundColor(.white)
-                    .font(Font.custom("Comfortaa-Bold", size: 36, relativeTo: .largeTitle))
+                    .font(Font.custom("Comfortaa-Bold", size: 32, relativeTo: .largeTitle))
                     .frame(maxWidth: .infinity, alignment: .center)
 
             }

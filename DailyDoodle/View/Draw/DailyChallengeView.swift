@@ -26,7 +26,7 @@ struct DailyChallengeView: View {
 
                     Text("Desafio do dia")
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .font(Font.custom("Comfortaa-Bold", size: 24))
+                        .font(Font.custom("Comfortaa-Bold", size: 28))
                         .padding(.bottom, 15)
                         .multilineTextAlignment(.center)
 
@@ -67,6 +67,10 @@ struct DailyChallengeView: View {
                                             {
                                         Image(systemName: "checkmark.circle.fill")
                                     })
+                                    .onTapGesture {
+                                        let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
+                                            impactHeavy.impactOccurred()
+                                    }
                                 }
 
                             }
@@ -92,7 +96,7 @@ struct DailyChallengeView: View {
                     }
 
                     Button {
-                        print("aiii papai cliquei")
+                        showSheet = true
                     } label: {
 
                         ZStack{
@@ -111,9 +115,6 @@ struct DailyChallengeView: View {
                             Text("Escolher da galeria")
                                 .font(Font.custom("Comfortaa-Bold", size: 20))
                                 .foregroundColor(Color("CTA"))
-                        }
-                        .onTapGesture {
-                            showSheet = true
                         }
                         .sheet(isPresented: $showSheet) {
                             ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)

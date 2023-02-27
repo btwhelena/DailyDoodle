@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct OnboardingView: View {
 
@@ -19,8 +20,8 @@ struct OnboardingView: View {
                 ThirdPage()
                     .environmentObject(lnManager)
             }
-            .tabViewStyle(PageTabViewStyle())
             .ignoresSafeArea()
+            .tabViewStyle(PageTabViewStyle())
     }
 }
 

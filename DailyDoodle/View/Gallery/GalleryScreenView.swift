@@ -73,20 +73,18 @@ struct DrawsView<Results:RandomAccessCollection>: View where Results.Element == 
     let results: Results
     let challenge: String
 
-    var columns: [GridItem] = [
-        GridItem(.flexible(minimum: 140)),
-        GridItem(.flexible()),
-        GridItem(.flexible())
+    private let adaptiveColumns = [
+        GridItem(.adaptive(minimum: 160))
     ]
 
-    let height: CGFloat = 150
+    let height: CGFloat = 198
 
     var body: some View {
 
         let drawsFiltered = results.filter { $0.challenge!.contains(challenge) }
 
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 16) {
+            LazyVGrid(columns: adaptiveColumns, spacing: 16) {
                 ForEach(drawsFiltered, id: \.self) { draw in
                     if draw.imagJPEG != nil {
                         CardView(draw: draw)
