@@ -20,7 +20,11 @@ struct ReferenceImage: View {
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(14.0)
                 .frame(width: width, height: height, alignment: .center)
-//                .clipShape(Circle())
+                .clipShape(Circle())
+                .accessibilityLabel("Reference Image")
+                .accessibilityAction {
+                    print(":)")
+                }
         } else {
             Text("Loading Image")
                 .task {

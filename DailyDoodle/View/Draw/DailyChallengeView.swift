@@ -18,20 +18,20 @@ struct DailyChallengeView: View {
             ZStack {
                 Color("Background").ignoresSafeArea()
 
-                Image("Circles")
+                Image(decorative: "Circles")
                     .resizable().scaledToFit()
                     .frame(maxHeight: .infinity, alignment: .bottom)
 
                 VStack {
 
-                    Text("Desafio do dia")
+                    Text("Today's Challenge")
                         .frame(maxWidth: .infinity, alignment: .center)
                         .font(Font.custom("Comfortaa-Bold", size: 28))
                         .padding(.bottom, 15)
                         .multilineTextAlignment(.center)
 
 
-                    Image("CHALLENGE-\(DateHelper.getCurrentDay())")
+                    Image(decorative: "CHALLENGE-\(DateHelper.getCurrentDay())")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 220, height: 220)
@@ -39,7 +39,7 @@ struct DailyChallengeView: View {
                         .clipShape(Rectangle())
 
 
-                    Text("Tente desenhar a imagem de referência acima ou escolha um desenho da sua galeria.")
+                    Text("Try drawing the reference image above or select a drawing from your gallery")
                         .frame(maxWidth: 330, alignment: .center)
                         .padding(.top, 15)
                         .padding(.bottom, 15)
@@ -66,6 +66,8 @@ struct DailyChallengeView: View {
                                         label:
                                             {
                                         Image(systemName: "checkmark.circle.fill")
+                                                    .accessibilityLabel("Finish challenge")
+
                                     })
                                     .onTapGesture {
                                         let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
@@ -88,7 +90,7 @@ struct DailyChallengeView: View {
                                     .frame(width: 250, height: 60)
                                     .cornerRadius(35)
 
-                                Text("Desenhar")
+                                Text("Start drawing")
                                     .font(Font.custom("Comfortaa-Bold", size: 20))
                                     .foregroundColor(.white)
                             }
@@ -112,7 +114,7 @@ struct DailyChallengeView: View {
                                         .cornerRadius(35)
                                     )
 
-                            Text("Escolher da galeria")
+                            Text("Select from gallery")
                                 .font(Font.custom("Comfortaa-Bold", size: 20))
                                 .foregroundColor(Color("CTA"))
                         }

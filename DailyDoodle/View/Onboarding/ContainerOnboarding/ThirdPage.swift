@@ -13,7 +13,7 @@ struct ThirdPage: View {
     @State private var scheduleDate = Date()
 
     var body: some View {
-        ZStack{
+        ZStack(alignment: .top) {
             Color("Background")
 
             VStack {
@@ -22,11 +22,11 @@ struct ThirdPage: View {
                     .frame(width: 450, height: 200)
 
 
-                Text("Cronograma")
+                Text("Schedule")
                     .frame(maxWidth: 330, alignment: .leading)
                     .font(Font.custom("Comfortaa-Bold", size: 48))
                     .multilineTextAlignment(.leading)
-                Text("Escolha seu horário favorito para desenhar")
+                Text("Pick your favorite time to draw")
                     .frame(maxWidth: 330, alignment: .leading)
                     .font(Font.custom("Comfortaa-Regular", size: 24))
                     .multilineTextAlignment(.leading)
@@ -36,6 +36,12 @@ struct ThirdPage: View {
                     .labelsHidden()
                     .padding(.bottom, 50)
                     .datePickerStyle(WheelDatePickerStyle())
+                    .onAppear {
+                        guard let date = Calendar.current.date(bySettingHour: 20, minute: 30, second: 0, of: Date()) else {
+                            return
+                        }
+                        scheduleDate = date
+                    }
 
                 Button {
                     shouldShowOnboarding = false
@@ -50,16 +56,18 @@ struct ThirdPage: View {
                         Rectangle()
                             .cornerRadius(30.0)
                             .foregroundColor(Color("CTA"))
-                            .frame(width: 153.0, height: 44.0, alignment: .center)
-                        Text("Iniciar")
+                            .frame(width: 180.0, height: 44.0, alignment: .center)
+                        Text("Start Now")
                             .foregroundColor(Color.white)
                             .font(Font.custom("Comfortaa-Regular", size: 24))
                     }
                 }
 
-            }.ignoresSafeArea()
+            }
 
-        }.ignoresSafeArea()
+
+        }
+        .ignoresSafeArea()
 
     }
 }

@@ -17,7 +17,8 @@ struct ContentView: View {
                 Color("Background")
                 VStack {
                     Elements()
-                    Text("Desafio de Hoje")
+                    Spacer(minLength: 32)
+                    Text("Today's Challenge")
                         .frame(maxWidth: 330, alignment: .leading)
                         .font(Font.custom("Comfortaa-Bold", size: 24))
                         .multilineTextAlignment(.leading)
@@ -29,26 +30,26 @@ struct ContentView: View {
                             isActive.toggle()
 
                         } label: {
-                            Image("CHALLENGE-\(DateHelper.getCurrentDay())")
+                            Image(decorative: "CHALLENGE-\(DateHelper.getCurrentDay())")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 344, height: 213)
+                                .frame(width: 330, height: 200)
                                 .cornerRadius(15)
                                 .clipShape(Rectangle())
                                 .overlay(
                                     Rectangle()
-                                        .fill(.white).opacity(0.8)
+                                        .fill(Color("Background")).opacity(0.5)
                                         .frame(width: 330, height: 50)
-                                        .cornerRadius(15)
+                                        .cornerRadius(15, corners: [.bottomLeft, .bottomRight])
                                         .padding(.top, 150)
                                         .overlay(alignment: .bottomTrailing) {
                                             HStack {
-                                                Text("Iniciar desafio")
-                                                    .font(Font.custom("Comfortaa-Bold", size: 20))
-                                                    .foregroundColor(.black)
+                                                Text("Start Challenge")
+                                                    .font(Font.custom("Comfortaa-Bold", size: 24))
+                                                    .foregroundColor(Color("Text"))
 
                                                 Image(systemName: "chevron.right.circle")
-                                                    .foregroundColor(.black)
+                                                    .foregroundColor(Color("Text"))
                                                     .font(.title)
                                             } .padding(.trailing, 10)
                                                 .padding(.bottom, 5)
@@ -56,8 +57,9 @@ struct ContentView: View {
                                 )
                         }
                     }
-
-                    Text("Galeria")
+                                   .accessibilityLabel("Start Challenge")
+                    Spacer(minLength: 32)
+                    Text("Gallery")
                         .frame(maxWidth: 330, alignment: .leading)
                         .font(Font.custom("Comfortaa-Bold", size: 24))
                         .multilineTextAlignment(.leading)

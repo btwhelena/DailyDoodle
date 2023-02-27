@@ -32,9 +32,8 @@ struct SecondPage: View {
                     LottieView(name: "LightMode")
                         .frame(width: 260.0, height: 250.0)
                 }
-
-                Text("Você irá fazer desafios diários tentando reproduzir imagens de referência através dos desenhos.")
-                    .frame(maxWidth: 330, alignment: .center)
+                Text("You will do daily challenges trying to reproduce reference images through drawings.")
+                    .frame(maxWidth: 330, alignment: .leading)
                     .font(Font.custom("Comfortaa-Regular", size: 24))
                     .multilineTextAlignment(.center)
                     .padding(50)

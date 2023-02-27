@@ -43,7 +43,7 @@ struct CardView: View {
                     .foregroundColor(.accentColor)
                     .frame(width: UIScreen.main.bounds.width/3.2)
                     .padding(10)
-            }
+            }.accessibilityLabel("Your drawing")
 
         }
     }
@@ -64,7 +64,7 @@ struct GalleryScreenView: View {
 
     var body: some View {
         DrawsView(results: draws, challenge: challenge)
-            .navigationTitle("Galeria")
+            .navigationTitle(challenge.capitalized)
     }
 }
 

@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  DailyDoodle
+
+  Created by Lais Godinho on 24/02/23.
+  
+*/
+
+"Today's Challenge" = "Desafio do dia";
+"Start Challenge" = "Iniciar desafio";
+"Gallery" = "Galeria";
+"This month challenge:" = "Tema do mês:";
+"Animals" = "Animais";
+"Select from gallery" = "Escolher da galeria";
+"Start drawing" = "Comece a desenhar";
+"Try drawing the reference image above or select a drawing from your gallery" = "Tente desenhar a imagem de referência acima ou escolha um desenho da sua galeria.";
+"Let's get it started?" = "Vamos começar?";
+"Drawings" = "Desenhos";
+"You will do daily challenges trying to reproduce reference images through drawings." = "Você irá fazer desafios diários tentando reproduzir imagens de referência através de desenhos.";
+"Schedule" = "Cronograma";
+"Pick your favorite time to draw" = "Escolha seu horário favorito para desenhar";
+"Start Now" = "Comece Agora";
+"Finish challenge" = "Concluir desafio";
+"Reference Image"= "Imagem de referência";
+"Your drawing"= "Seu desenho";

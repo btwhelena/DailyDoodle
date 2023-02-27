@@ -11,18 +11,18 @@ struct Elements: View {
     var body: some View {
         ZStack {
 
-            Image("TopCircles")
+            Image(decorative: "TopCircles")
                 .resizable().scaledToFit()
                 .frame(width: 450, height: 200)
 
             VStack {
-                Text("Tema do mês:")
+                Text("This month challenge:")
                     .padding(.top, 30)
                     .foregroundColor(.white)
                     .font(Font.custom("Comfortaa-Bold", size: 24, relativeTo: .title))
                     .frame(maxWidth: .infinity, alignment: .center)
 
-                Text("Animais")
+                Text("Animals")
                     .foregroundColor(.white)
                     .font(Font.custom("Comfortaa-Bold", size: 32, relativeTo: .largeTitle))
                     .frame(maxWidth: .infinity, alignment: .center)
