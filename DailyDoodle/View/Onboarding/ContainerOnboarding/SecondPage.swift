@@ -14,11 +14,11 @@ struct SecondPage: View {
         ZStack{
             Color("Background")
             VStack {
-                Text("Desenhos")
+                Text("Drawings")
                     .frame(maxWidth: 330, alignment: .leading)
                     .font(Font.custom("Comfortaa-Bold", size: 48))
                     .multilineTextAlignment(.leading)
-                Text("Você irá fazer desafios diários tentando reproduzir imagens de referência através dos desenhos.")
+                Text("You will do daily challenges trying to reproduce reference images through drawings.")
                     .frame(maxWidth: 330, alignment: .leading)
                     .font(Font.custom("Comfortaa-Regular", size: 24))
                     .multilineTextAlignment(.leading)

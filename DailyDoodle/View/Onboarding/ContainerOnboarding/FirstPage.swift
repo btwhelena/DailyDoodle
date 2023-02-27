@@ -14,7 +14,7 @@ struct FirstPage: View {
             Color("Background")
             VStack {
                 Spacer().frame(height: 120)
-                Text("Vamos começar?")
+                Text("Let's get it started?")
                     .frame(maxWidth: 330, alignment: .leading)
                     .font(Font.custom("Comfortaa-Bold", size: 48.0))
                     .multilineTextAlignment(.leading)

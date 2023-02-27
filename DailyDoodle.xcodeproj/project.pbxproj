@@ -23,6 +23,8 @@
 		0B0BD39029A7B5A200268D44 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD38F29A7B5A200268D44 /* Persistence.swift */; };
 		0B0BD39229A7B5B800268D44 /* DrawsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD39129A7B5B800268D44 /* DrawsViewModel.swift */; };
 		0B0BD39429A7B5D100268D44 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD39329A7B5D100268D44 /* UIImageTransformer.swift */; };
+		0B0BD39729A8EFFE00268D44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0BD39929A8EFFE00268D44 /* Localizable.strings */; };
+		0B619C4A29ACDC9E001DBD49 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B619C4929ACDC9E001DBD49 /* RoundedCorner.swift */; };
 		0D6B0140299D131400B34135 /* DailyChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B013F299D131400B34135 /* DailyChallengeView.swift */; };
 		0D6B0147299E62FF00B34135 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B0146299E62FF00B34135 /* ImagePicker.swift */; };
 		0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */; };
@@ -57,6 +59,9 @@
 		0B0BD38F29A7B5A200268D44 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0B0BD39129A7B5B800268D44 /* DrawsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawsViewModel.swift; sourceTree = "<group>"; };
 		0B0BD39329A7B5D100268D44 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
+		0B0BD39829A8EFFE00268D44 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0B0BD39A29A8F00600268D44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0B619C4929ACDC9E001DBD49 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		0D6B013F299D131400B34135 /* DailyChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeView.swift; sourceTree = "<group>"; };
 		0D6B0146299E62FF00B34135 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0DA79588299A7B18003CA2AC /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +98,7 @@
 				0D6B0149299E6B1600B34135 /* Utils */,
 				0B0BD33B299BC56100268D44 /* Components */,
 				0B0BD336299BB13A00268D44 /* Draw */,
+				0B619C4929ACDC9E001DBD49 /* RoundedCorner.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 				0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */,
 				0DA7958F299A7B19003CA2AC /* Assets.xcassets */,
 				0DA79591299A7B19003CA2AC /* Preview Content */,
+				0B0BD39929A8EFFE00268D44 /* Localizable.strings */,
 			);
 			path = DailyDoodle;
 			sourceTree = "<group>";
@@ -281,6 +288,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 0DA7957F299A7B18003CA2AC;
 			productRefGroup = 0DA79589299A7B18003CA2AC /* Products */;
@@ -298,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */,
+				0B0BD39729A8EFFE00268D44 /* Localizable.strings in Resources */,
 				0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */,
 				D6AEA2C229A2536400FBE1C0 /* Comfortaa-Bold.ttf in Resources */,
 			);
@@ -351,6 +360,7 @@
 				D64750C6299E5DF6003D6CC3 /* GalleryScreenView.swift in Sources */,
 				D65AC56529A15F2800F91B85 /* FirstPage.swift in Sources */,
 				0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */,
+				0B619C4A29ACDC9E001DBD49 /* RoundedCorner.swift in Sources */,
 				0B0BD39429A7B5D100268D44 /* UIImageTransformer.swift in Sources */,
 				0B0BD39029A7B5A200268D44 /* Persistence.swift in Sources */,
 				D65AC56C29A1714000F91B85 /* LocalNotificationModel.swift in Sources */,
@@ -362,6 +372,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0B0BD39929A8EFFE00268D44 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B0BD39829A8EFFE00268D44 /* pt-BR */,
+				0B0BD39A29A8F00600268D44 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0DA79594299A7B19003CA2AC /* Debug */ = {

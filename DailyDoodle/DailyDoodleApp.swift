@@ -19,8 +19,10 @@ struct DailyDoodleApp: App {
             if shouldShowOnboarding {
                 OnboardingView()
             } else {
-                ContentView()
-                    .environment(\.managedObjectContext, persistenceContainer.persistentContainer.viewContext)
+                withAnimation(.easeInOut(duration: 4.0)) {
+                    ContentView()
+                        .environment(\.managedObjectContext, persistenceContainer.persistentContainer.viewContext)
+                }
             }
         }
     }
