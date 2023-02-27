@@ -13,7 +13,7 @@ struct ThirdPage: View {
     @State private var scheduleDate = Date()
 
     var body: some View {
-        ZStack{
+        ZStack(alignment: .top) {
             Color("Background")
 
             VStack {
@@ -55,9 +55,11 @@ struct ThirdPage: View {
                     }
                 }
 
-            }.ignoresSafeArea()
+            }
 
-        }.ignoresSafeArea()
+
+        }
+        .ignoresSafeArea()
 
     }
 }
