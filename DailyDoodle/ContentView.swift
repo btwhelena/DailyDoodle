@@ -19,8 +19,9 @@ struct ContentView: View {
                     Elements()
                     Text("Desafio de Hoje")
                         .frame(maxWidth: 330, alignment: .leading)
-                        .font(Font.custom("Comfortaa-Bold", size: 28))
+                        .font(Font.custom("Comfortaa-Bold", size: 24))
                         .multilineTextAlignment(.leading)
+                        .padding(20)
                     NavigationLink(destination:
                                     DailyChallengeView()
                                    , isActive: $isActive) {
@@ -31,7 +32,7 @@ struct ContentView: View {
                             Image("CHALLENGE-\(DateHelper.getCurrentDay())")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 330, height: 200)
+                                .frame(width: 344, height: 213)
                                 .cornerRadius(15)
                                 .clipShape(Rectangle())
                                 .overlay(
@@ -43,7 +44,7 @@ struct ContentView: View {
                                         .overlay(alignment: .bottomTrailing) {
                                             HStack {
                                                 Text("Iniciar desafio")
-                                                    .font(Font.custom("Comfortaa-Bold", size: 24))
+                                                    .font(Font.custom("Comfortaa-Bold", size: 20))
                                                     .foregroundColor(.black)
 
                                                 Image(systemName: "chevron.right.circle")
@@ -55,16 +56,19 @@ struct ContentView: View {
                                 )
                         }
                     }
+
                     Text("Galeria")
                         .frame(maxWidth: 330, alignment: .leading)
-                        .font(Font.custom("Comfortaa-Bold", size: 28))
+                        .font(Font.custom("Comfortaa-Bold", size: 24))
                         .multilineTextAlignment(.leading)
+                        .padding(20)
                     GalleryPreviews().frame(maxWidth: 330, alignment: .leading)
                 }
             }
             .ignoresSafeArea()
         }
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -72,3 +76,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

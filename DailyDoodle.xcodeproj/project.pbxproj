@@ -28,6 +28,10 @@
 		0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */; };
 		0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA7958F299A7B19003CA2AC /* Assets.xcassets */; };
 		0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */; };
+		D6249DF029ACD5250075828B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D6249DEF29ACD5250075828B /* Lottie */; };
+		D6249DF429ACD5DC0075828B /* DarkMode.json in Resources */ = {isa = PBXBuildFile; fileRef = D6249DF229ACD5DB0075828B /* DarkMode.json */; };
+		D6249DF529ACD5DC0075828B /* LightMode.json in Resources */ = {isa = PBXBuildFile; fileRef = D6249DF329ACD5DC0075828B /* LightMode.json */; };
+		D6249DF729ACD6B40075828B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6249DF629ACD6B40075828B /* LottieView.swift */; };
 		D64750C6299E5DF6003D6CC3 /* GalleryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */; };
 		D65AC56229A15B6E00F91B85 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56129A15B6E00F91B85 /* OnboardingView.swift */; };
 		D65AC56529A15F2800F91B85 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56429A15F2800F91B85 /* FirstPage.swift */; };
@@ -63,6 +67,9 @@
 		0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
 		0DA7958F299A7B19003CA2AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D6249DF229ACD5DB0075828B /* DarkMode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DarkMode.json; sourceTree = "<group>"; };
+		D6249DF329ACD5DC0075828B /* LightMode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LightMode.json; sourceTree = "<group>"; };
+		D6249DF629ACD6B40075828B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D63C9AC6299BB822008058B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D63C9AC9299BB88F008058B8 /* DailyDoodleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodleRelease.entitlements; sourceTree = "<group>"; };
 		D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreenView.swift; sourceTree = "<group>"; };
@@ -80,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6249DF029ACD5250075828B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,9 +97,9 @@
 		0B0BD335299BB12F00268D44 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D65AC56029A15B5200F91B85 /* Onboarding */,
-				0D6B0149299E6B1600B34135 /* Utils */,
 				0B0BD33B299BC56100268D44 /* Components */,
+				D65AC56029A15B5200F91B85 /* Onboarding */,
+				D6249DED29ACD44E0075828B /* Gallery */,
 				0B0BD336299BB13A00268D44 /* Draw */,
 			);
 			path = View;
@@ -100,6 +108,7 @@
 		0B0BD336299BB13A00268D44 /* Draw */ = {
 			isa = PBXGroup;
 			children = (
+				0D6B013F299D131400B34135 /* DailyChallengeView.swift */,
 				0B0BD337299BB1F400268D44 /* DrawView.swift */,
 				0B0BD339299BB95100268D44 /* PKCanvasRepresentation.swift */,
 			);
@@ -109,6 +118,9 @@
 		0B0BD33B299BC56100268D44 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6249DF129ACD5B80075828B /* Lottie */,
+				0B0BD370299E718200268D44 /* ElementsView.swift */,
+				0D6B0146299E62FF00B34135 /* ImagePicker.swift */,
 				0B0BD33E299BC9C300268D44 /* PictureView */,
 				0B0BD33C299BC58500268D44 /* ReferenceImage.swift */,
 				0B0BD345299D134800268D44 /* UndoAndRedoButtons.swift */,
@@ -129,6 +141,8 @@
 		0B0BD38229A7B0C800268D44 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0D6B0138299BB84A00B34135 /* Fonts */,
+				D65AC56A29A1711000F91B85 /* LocalNotificationManager */,
 				0B0BD38329A7B0DC00268D44 /* DateHelper.swift */,
 			);
 			path = Utils;
@@ -155,14 +169,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		0D6B0149299E6B1600B34135 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				0D6B0146299E62FF00B34135 /* ImagePicker.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		0DA7957F299A7B18003CA2AC = {
 			isa = PBXGroup;
 			children = (
@@ -186,13 +192,7 @@
 				0B0BD38229A7B0C800268D44 /* Utils */,
 				0B0BD38129A790EE00268D44 /* DailyDoodle.entitlements */,
 				0B0BD37629A7875600268D44 /* ContentView.swift */,
-				D65AC56A29A1711000F91B85 /* LocalNotificationManager */,
 				0B0BD335299BB12F00268D44 /* View */,
-				D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */,
-				0B0BD36E299E718000268D44 /* GalleryPreviews.swift */,
-				0B0BD370299E718200268D44 /* ElementsView.swift */,
-				0D6B013F299D131400B34135 /* DailyChallengeView.swift */,
-				0D6B0138299BB84A00B34135 /* Fonts */,
 				D63C9AC9299BB88F008058B8 /* DailyDoodleRelease.entitlements */,
 				D63C9AC6299BB822008058B8 /* Info.plist */,
 				0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */,
@@ -208,6 +208,25 @@
 				0DA79592299A7B19003CA2AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D6249DED29ACD44E0075828B /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */,
+				0B0BD36E299E718000268D44 /* GalleryPreviews.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		D6249DF129ACD5B80075828B /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				D6249DF229ACD5DB0075828B /* DarkMode.json */,
+				D6249DF329ACD5DC0075828B /* LightMode.json */,
+				D6249DF629ACD6B40075828B /* LottieView.swift */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		D65AC56029A15B5200F91B85 /* Onboarding */ = {
@@ -255,6 +274,9 @@
 			dependencies = (
 			);
 			name = DailyDoodle;
+			packageProductDependencies = (
+				D6249DEF29ACD5250075828B /* Lottie */,
+			);
 			productName = DailyDoodle;
 			productReference = 0DA79588299A7B18003CA2AC /* DailyDoodle.app */;
 			productType = "com.apple.product-type.application";
@@ -283,6 +305,9 @@
 				Base,
 			);
 			mainGroup = 0DA7957F299A7B18003CA2AC;
+			packageReferences = (
+				D6249DEE29ACD5250075828B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 0DA79589299A7B18003CA2AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,8 +322,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6249DF429ACD5DC0075828B /* DarkMode.json in Resources */,
 				0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */,
 				0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */,
+				D6249DF529ACD5DC0075828B /* LightMode.json in Resources */,
 				D6AEA2C229A2536400FBE1C0 /* Comfortaa-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +369,7 @@
 				0B0BD37729A7875600268D44 /* ContentView.swift in Sources */,
 				0B0BD340299BC9DA00268D44 /* ZoomableScrollView.swift in Sources */,
 				0B0BD346299D134800268D44 /* UndoAndRedoButtons.swift in Sources */,
+				D6249DF729ACD6B40075828B /* LottieView.swift in Sources */,
 				0B0BD36F299E718000268D44 /* GalleryPreviews.swift in Sources */,
 				0B0BD342299BC9F800268D44 /* FullPictureView.swift in Sources */,
 				0B0BD38C29A7B51700268D44 /* DailyDoodleModel.xcdatamodeld in Sources */,
@@ -490,7 +518,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyDoodle/DailyDoodle.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyDoodle/Preview Content\"";
 				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_PREVIEWS = YES;
@@ -498,8 +526,11 @@
 				INFOPLIST_FILE = DailyDoodle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+<<<<<<< HEAD
+=======
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+>>>>>>> d42b3e5b6656262f9b44891d5a0ee75c20d90daa
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,9 +540,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -523,7 +557,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyDoodle/DailyDoodleRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyDoodle/Preview Content\"";
 				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_PREVIEWS = YES;
@@ -531,21 +565,26 @@
 				INFOPLIST_FILE = DailyDoodle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+<<<<<<< HEAD
+=======
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+>>>>>>> d42b3e5b6656262f9b44891d5a0ee75c20d90daa
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -571,6 +610,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6249DEE29ACD5250075828B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6249DEF29ACD5250075828B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6249DEE29ACD5250075828B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0B0BD38A29A7B51700268D44 /* DailyDoodleModel.xcdatamodeld */ = {

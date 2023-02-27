@@ -22,7 +22,7 @@ struct FirstPage: View {
                 Spacer().frame(height: 100)
             }.ignoresSafeArea()
         }.ignoresSafeArea()
-        
+
     }
 }
 
@@ -34,3 +34,4 @@ struct FirstPage_Previews: PreviewProvider {
         FirstPage()
     }
 }
+

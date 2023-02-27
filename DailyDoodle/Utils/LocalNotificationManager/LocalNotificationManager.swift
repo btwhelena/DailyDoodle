@@ -16,10 +16,11 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
     override init() {
         super.init()
         notificationCenter.delegate = self
+
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-        return [.sound, .banner]
+        return [.sound, .badge, .alert]
     }
 
     func requestNotification() async throws{
@@ -38,11 +39,10 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
         content.body = localNotification.body
         content.sound = .default
 
+
         guard let dateComponents = localNotification.dateComponents else { return }
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: localNotification.repeats)
         let request = UNNotificationRequest(identifier: localNotification.identifier, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: [localNotification.identifier])
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [localNotification.identifier])
         try? await notificationCenter.add(request)
         print([localNotification])
     }

@@ -6,22 +6,38 @@
 //
 
 import SwiftUI
+import UIKit
+import Lottie
 
 struct SecondPage: View {
+
+    private var animationView: LottieAnimationView?
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
 
         ZStack{
             Color("Background")
             VStack {
-                Text("Desenhos")
-                    .frame(maxWidth: 330, alignment: .leading)
+                Text("Daily Doodle")
+                    .frame(maxWidth: 330, alignment: .center)
                     .font(Font.custom("Comfortaa-Bold", size: 48))
                     .multilineTextAlignment(.leading)
+                    .padding(50)
+
+                if colorScheme == .dark {
+                    LottieView(name: "DarkMode")
+                        .frame(width: 260.0, height: 250.0)
+                } else {
+                    LottieView(name: "LightMode")
+                        .frame(width: 260.0, height: 250.0)
+                }
+
                 Text("Você irá fazer desafios diários tentando reproduzir imagens de referência através dos desenhos.")
-                    .frame(maxWidth: 330, alignment: .leading)
+                    .frame(maxWidth: 330, alignment: .center)
                     .font(Font.custom("Comfortaa-Regular", size: 24))
-                    .multilineTextAlignment(.leading)
+                    .multilineTextAlignment(.center)
+                    .padding(50)
             }.ignoresSafeArea()
         }.ignoresSafeArea()
     }

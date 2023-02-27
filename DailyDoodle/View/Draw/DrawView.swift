@@ -16,7 +16,7 @@ struct DrawView: View {
                 ReferenceImage()
             }
             .fullScreenCover(isPresented: $isImageFullScreen, content: {
-                FullScreenModalView(image: UIImage(named: "CHALLENGE-1")!)
+                FullScreenModalView(image: UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!)
             })
             canvasView
         }

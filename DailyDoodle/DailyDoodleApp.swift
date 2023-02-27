@@ -11,6 +11,7 @@ import SwiftUI
 struct DailyDoodleApp: App {
 
     let persistenceContainer = CoreDataManager.shared
+    let colorSchemeVar : ColorScheme = .dark
 
     @AppStorage("shouldShowOnboarding") var shouldShowOnboarding :Bool = true
 
@@ -21,6 +22,7 @@ struct DailyDoodleApp: App {
             } else {
                 ContentView()
                     .environment(\.managedObjectContext, persistenceContainer.persistentContainer.viewContext)
+                    .environment(\.colorScheme, colorSchemeVar)
             }
         }
     }
