@@ -21,6 +21,14 @@ struct OnboardingView: View {
             }
             .tabViewStyle(PageTabViewStyle())
             .ignoresSafeArea()
+            .onAppear {
+                setupAppearancce()
+            }
+    }
+
+    func setupAppearancce() {
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(named: "CTA")
+        UIPageControl.appearance().pageIndicatorTintColor = .gray
     }
 }
 
