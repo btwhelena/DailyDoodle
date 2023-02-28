@@ -25,6 +25,9 @@
 		0B0BD39429A7B5D100268D44 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BD39329A7B5D100268D44 /* UIImageTransformer.swift */; };
 		0B0BD39729A8EFFE00268D44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0BD39929A8EFFE00268D44 /* Localizable.strings */; };
 		0B619C4A29ACDC9E001DBD49 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B619C4929ACDC9E001DBD49 /* RoundedCorner.swift */; };
+		0B619C4C29AE29E7001DBD49 /* confirm.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B619C4B29AE29E7001DBD49 /* confirm.json */; };
+		0BA5A27A29AE43EF0092FE45 /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5A27929AE43EF0092FE45 /* NavigationUtil.swift */; };
+		0BA5A27C29AE4C9E0092FE45 /* confirm-dark.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5A27B29AE4C9E0092FE45 /* confirm-dark.json */; };
 		0D6B0140299D131400B34135 /* DailyChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B013F299D131400B34135 /* DailyChallengeView.swift */; };
 		0D6B0147299E62FF00B34135 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B0146299E62FF00B34135 /* ImagePicker.swift */; };
 		0DA7958C299A7B18003CA2AC /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */; };
@@ -66,6 +69,9 @@
 		0B0BD39829A8EFFE00268D44 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		0B0BD39A29A8F00600268D44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0B619C4929ACDC9E001DBD49 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		0B619C4B29AE29E7001DBD49 /* confirm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confirm.json; sourceTree = "<group>"; };
+		0BA5A27929AE43EF0092FE45 /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
+		0BA5A27B29AE4C9E0092FE45 /* confirm-dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "confirm-dark.json"; sourceTree = "<group>"; };
 		0D6B013F299D131400B34135 /* DailyChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeView.swift; sourceTree = "<group>"; };
 		0D6B0146299E62FF00B34135 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0DA79588299A7B18003CA2AC /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +136,7 @@
 				0B0BD33E299BC9C300268D44 /* PictureView */,
 				0B0BD33C299BC58500268D44 /* ReferenceImage.swift */,
 				0B0BD345299D134800268D44 /* UndoAndRedoButtons.swift */,
+				0BA5A27929AE43EF0092FE45 /* NavigationUtil.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -229,6 +236,8 @@
 		D6249DF129ACD5B80075828B /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				0BA5A27B29AE4C9E0092FE45 /* confirm-dark.json */,
+				0B619C4B29AE29E7001DBD49 /* confirm.json */,
 				D6249DF229ACD5DB0075828B /* DarkMode.json */,
 				D6249DF329ACD5DC0075828B /* LightMode.json */,
 				D6249DF629ACD6B40075828B /* LottieView.swift */,
@@ -331,10 +340,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6249DF429ACD5DC0075828B /* DarkMode.json in Resources */,
+				0B619C4C29AE29E7001DBD49 /* confirm.json in Resources */,
 				0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */,
 				0B0BD39729A8EFFE00268D44 /* Localizable.strings in Resources */,
 				0DA79590299A7B19003CA2AC /* Assets.xcassets in Resources */,
 				D6249DF529ACD5DC0075828B /* LightMode.json in Resources */,
+				0BA5A27C29AE4C9E0092FE45 /* confirm-dark.json in Resources */,
 				D6AEA2C229A2536400FBE1C0 /* Comfortaa-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +395,7 @@
 				0B0BD38C29A7B51700268D44 /* DailyDoodleModel.xcdatamodeld in Sources */,
 				0B0BD33D299BC58500268D44 /* ReferenceImage.swift in Sources */,
 				0B0BD344299BCA5A00268D44 /* FullScreenModalView.swift in Sources */,
+				0BA5A27A29AE43EF0092FE45 /* NavigationUtil.swift in Sources */,
 				D65AC56E29A1716600F91B85 /* LocalNotificationManager.swift in Sources */,
 				D64750C6299E5DF6003D6CC3 /* GalleryScreenView.swift in Sources */,
 				D65AC56529A15F2800F91B85 /* FirstPage.swift in Sources */,
@@ -466,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -522,7 +534,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -549,7 +561,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -584,7 +596,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

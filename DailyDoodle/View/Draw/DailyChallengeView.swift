@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct DailyChallengeView: View {
 
@@ -13,6 +14,8 @@ struct DailyChallengeView: View {
     @State private var showSheet = false
     @State var isActive = false
     @State var canvasView = PKCanvasRepresentation()
+    @State var isPaused: Bool = true
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
             ZStack {
@@ -26,7 +29,7 @@ struct DailyChallengeView: View {
 
                     Text("Today's Challenge")
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .font(Font.custom("Comfortaa-Bold", size: 28))
+                        .font(.system(size: 28, design: .rounded).weight(.bold))
                         .padding(.bottom, 15)
                         .multilineTextAlignment(.center)
 
@@ -39,11 +42,11 @@ struct DailyChallengeView: View {
                         .clipShape(Rectangle())
 
 
-                    Text("Try drawing the reference image above or select a drawing from your gallery")
+                    Text("Try drawing the reference image above or draw it on a paper and upload it to complete the challenge.")
                         .frame(maxWidth: 330, alignment: .center)
                         .padding(.top, 15)
                         .padding(.bottom, 15)
-                        .font(Font.custom("Comfortaa-Regular", fixedSize: 24))
+                        .font(.system(size: 24, design: .rounded))
                         .multilineTextAlignment(.center)
 
 
@@ -62,11 +65,19 @@ struct DailyChallengeView: View {
                                         Image(systemName: "square.and.arrow.up")
                                     })
                                     Button(
-                                        action: canvasView.finishChallenge,
+                                        action: {
+                                            isPaused.toggle()
+                                            canvasView.finishChallenge()
+                                            Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { time in
+                                                NavigationUtil.popToRootView()
+                                            }
+                                        },
                                         label:
                                             {
-                                        Image(systemName: "checkmark.circle.fill")
+                                                LottieView(name: colorScheme == .dark ? "confirm-dark" : "confirm", loopMode: .autoReverse, isPaused: $isPaused)
+                                                    .frame(width: 40.0, height: 40.0)
                                                     .accessibilityLabel("Finish challenge")
+
 
                                     })
                                     .onTapGesture {
@@ -91,7 +102,7 @@ struct DailyChallengeView: View {
                                     .cornerRadius(35)
 
                                 Text("Start drawing")
-                                    .font(Font.custom("Comfortaa-Bold", size: 20))
+                                    .font(.system(size: 20, design: .rounded))
                                     .foregroundColor(.white)
                             }
                         }
@@ -114,8 +125,8 @@ struct DailyChallengeView: View {
                                         .cornerRadius(35)
                                     )
 
-                            Text("Select from gallery")
-                                .font(Font.custom("Comfortaa-Bold", size: 20))
+                            Text("Upload drawing")
+                                .font(.system(size: 20, design: .rounded))
                                 .foregroundColor(Color("CTA"))
                         }
                         .sheet(isPresented: $showSheet) {

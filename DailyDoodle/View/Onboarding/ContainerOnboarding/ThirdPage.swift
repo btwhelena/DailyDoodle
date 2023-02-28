@@ -22,13 +22,13 @@ struct ThirdPage: View {
                     .frame(width: 450, height: 200)
 
 
-                Text("Schedule")
+                Text("Notifications")
                     .frame(maxWidth: 330, alignment: .leading)
-                    .font(Font.custom("Comfortaa-Bold", size: 48))
+                    .font(.system(size: 48, design: .rounded))
                     .multilineTextAlignment(.leading)
                 Text("Pick your favorite time to draw")
                     .frame(maxWidth: 330, alignment: .leading)
-                    .font(Font.custom("Comfortaa-Regular", size: 24))
+                    .font(.system(size: 24, design: .rounded))
                     .multilineTextAlignment(.leading)
 
                 DatePicker("", selection: $scheduleDate, displayedComponents: .hourAndMinute)
@@ -59,7 +59,7 @@ struct ThirdPage: View {
                             .frame(width: 180.0, height: 44.0, alignment: .center)
                         Text("Start Now")
                             .foregroundColor(Color.white)
-                            .font(Font.custom("Comfortaa-Regular", size: 24))
+                            .font(.system(size: 24, design: .rounded))
                     }
                 }
 
