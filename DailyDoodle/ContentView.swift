@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var isActive = false
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack{
                 Color("Background")
                 VStack {
@@ -20,7 +20,7 @@ struct ContentView: View {
                     Spacer(minLength: 32)
                     Text("Today's Challenge")
                         .frame(maxWidth: 330, alignment: .leading)
-                        .font(Font.custom("Comfortaa-Bold", size: 24))
+                        .font(.system(size: 24, design: .rounded))
                         .multilineTextAlignment(.leading)
                         .padding(20)
                     NavigationLink(destination:
@@ -45,7 +45,7 @@ struct ContentView: View {
                                         .overlay(alignment: .bottomTrailing) {
                                             HStack {
                                                 Text("Start Challenge")
-                                                    .font(Font.custom("Comfortaa-Bold", size: 24))
+                                                    .font(.system(size: 24, design: .rounded))
                                                     .foregroundColor(Color("Text"))
 
                                                 Image(systemName: "chevron.right.circle")
@@ -59,9 +59,9 @@ struct ContentView: View {
                     }
                                    .accessibilityLabel("Start Challenge")
                     Spacer(minLength: 32)
-                    Text("Gallery")
+                    Text("Your drawings")
                         .frame(maxWidth: 330, alignment: .leading)
-                        .font(Font.custom("Comfortaa-Bold", size: 24))
+                        .font(.system(size: 24, design: .rounded))
                         .multilineTextAlignment(.leading)
                         .padding(20)
                     GalleryPreviews().frame(maxWidth: 330, alignment: .leading)

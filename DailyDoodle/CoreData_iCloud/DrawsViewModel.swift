@@ -27,13 +27,11 @@ class DrawViewModel: ObservableObject {
 
 
     func downloadImage(image: UIImage) {
+        let draw = Drawing(context: self.context)
+        draw.challenge = "Animals"
+        draw.imagJPEG = image
 
-            let draw = Drawing(context: self.context)
-            draw.challenge = "Animals"
-            draw.imagJPEG = image
-
-            try? self.context.save()
-
+        try? self.context.save()
     }
 
     func delete(draw: Drawing) {

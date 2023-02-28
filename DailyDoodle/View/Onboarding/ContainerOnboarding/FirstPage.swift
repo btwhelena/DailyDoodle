@@ -16,7 +16,7 @@ struct FirstPage: View {
                 Spacer().frame(height: 120)
                 Text("Let's get it started?")
                     .frame(maxWidth: 330, alignment: .leading)
-                    .font(Font.custom("Comfortaa-Bold", size: 48.0))
+                    .font(.system(size: 48, design: .rounded))
                     .multilineTextAlignment(.leading)
 
                 Spacer().frame(height: 100)

@@ -21,20 +21,18 @@ struct SecondPage: View {
             VStack {
                 Text("Daily Doodle")
                     .frame(maxWidth: 330, alignment: .center)
-                    .font(Font.custom("Comfortaa-Bold", size: 48))
+                    .font(.system(size: 48, design: .rounded))
                     .multilineTextAlignment(.leading)
                     .padding(50)
 
-                if colorScheme == .dark {
-                    LottieView(name: "DarkMode")
-                        .frame(width: 260.0, height: 250.0)
-                } else {
-                    LottieView(name: "LightMode")
-                        .frame(width: 260.0, height: 250.0)
-                }
+                let animation = LottieView(name: colorScheme == .dark ? "DarkMode" : "LightMode", isPaused: .constant(false))
+                    .frame(width: 260.0, height: 250.0)
+
+                animation
+
                 Text("You will do daily challenges trying to reproduce reference images through drawings.")
                     .frame(maxWidth: 330, alignment: .leading)
-                    .font(Font.custom("Comfortaa-Regular", size: 24))
+                    .font(.system(size: 24, design: .rounded))
                     .multilineTextAlignment(.center)
                     .padding(50)
             }.ignoresSafeArea()

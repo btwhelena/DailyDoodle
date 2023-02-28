@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ReferenceImage: View {
-    var width: CGFloat = 240
+    var width: CGFloat = 160
     var height: CGFloat = 160
 
     @State var image: UIImage? = UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!
@@ -17,14 +17,10 @@ struct ReferenceImage: View {
         if let image {
             Image(uiImage: image)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(14.0)
+                .aspectRatio(contentMode: .fill)
                 .frame(width: width, height: height, alignment: .center)
                 .clipShape(Circle())
                 .accessibilityLabel("Reference Image")
-                .accessibilityAction {
-                    print(":)")
-                }
         } else {
             Text("Loading Image")
                 .task {
