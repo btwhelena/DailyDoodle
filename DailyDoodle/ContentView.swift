@@ -10,6 +10,8 @@ import PencilKit
 
 struct ContentView: View {
     @State var isActive = false
+    @State var sheetNotification = false
+    @StateObject var lnManager = LocalNotificationManager()
 
     var body: some View {
         NavigationView {
@@ -18,11 +20,27 @@ struct ContentView: View {
                 VStack {
                     Elements()
                     Spacer(minLength: 32)
-                    Text("Today's Challenge")
-                        .frame(maxWidth: 330, alignment: .leading)
-                        .font(Font.custom("Comfortaa-Bold", size: 24))
-                        .multilineTextAlignment(.leading)
-                        .padding(20)
+                    HStack{
+                        Text("Today's Challenge")
+                            .frame(maxWidth: 330, alignment: .leading)
+                            .font(Font.custom("Comfortaa-Bold", size: 24))
+                            .multilineTextAlignment(.leading)
+                        Button {
+                            self.sheetNotification = true
+                        } label: {
+                            Image(systemName: "bell.and.waves.left.and.right.fill")
+                                .sheet(isPresented: $sheetNotification) {
+                                    NotificationView( sheetNotification: $sheetNotification)
+                                        .environmentObject(self.lnManager)
+                                        .presentationDetents([.medium])
+                                        .presentationDragIndicator(.visible)
+            
+                                }
+                        }
+
+                    }
+                    .frame(maxWidth: 330)
+
                     NavigationLink(destination:
                                     DailyChallengeView()
                                    , isActive: $isActive) {
@@ -57,15 +75,19 @@ struct ContentView: View {
                                 )
                         }
                     }
-                                   .accessibilityLabel("Start Challenge")
+                    .accessibilityLabel("Start Challenge")
                     Spacer(minLength: 32)
-                    Text("Gallery")
-                        .frame(maxWidth: 330, alignment: .leading)
-                        .font(Font.custom("Comfortaa-Bold", size: 24))
-                        .multilineTextAlignment(.leading)
-                        .padding(20)
-                    GalleryPreviews().frame(maxWidth: 330, alignment: .leading)
+                    VStack {
+                        Text("Gallery")
+                            .frame(maxWidth: 330, alignment: .leading)
+                            .font(Font.custom("Comfortaa-Bold", size: 24))
+                            .multilineTextAlignment(.leading)
+                            .padding(20)
+                        GalleryPreviews().frame(maxWidth: 330, alignment: .leading)
+                    }
                 }
+//                .padding(20)
+
             }
             .ignoresSafeArea()
         }
@@ -73,10 +95,6 @@ struct ContentView: View {
 
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+
 
 
