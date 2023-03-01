@@ -37,6 +37,8 @@
 		D6249DF429ACD5DC0075828B /* DarkMode.json in Resources */ = {isa = PBXBuildFile; fileRef = D6249DF229ACD5DB0075828B /* DarkMode.json */; };
 		D6249DF529ACD5DC0075828B /* LightMode.json in Resources */ = {isa = PBXBuildFile; fileRef = D6249DF329ACD5DC0075828B /* LightMode.json */; };
 		D6249DF729ACD6B40075828B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6249DF629ACD6B40075828B /* LottieView.swift */; };
+		D635D44429AE2950008765F8 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635D44329AE2950008765F8 /* NotificationView.swift */; };
+		D635D44929AE4324008765F8 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D635D44829AE4324008765F8 /* PopupView */; };
 		D64750C6299E5DF6003D6CC3 /* GalleryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */; };
 		D65AC56229A15B6E00F91B85 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56129A15B6E00F91B85 /* OnboardingView.swift */; };
 		D65AC56529A15F2800F91B85 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56429A15F2800F91B85 /* FirstPage.swift */; };
@@ -81,6 +83,7 @@
 		D6249DF229ACD5DB0075828B /* DarkMode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DarkMode.json; sourceTree = "<group>"; };
 		D6249DF329ACD5DC0075828B /* LightMode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LightMode.json; sourceTree = "<group>"; };
 		D6249DF629ACD6B40075828B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		D635D44329AE2950008765F8 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		D63C9AC6299BB822008058B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D63C9AC9299BB88F008058B8 /* DailyDoodleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodleRelease.entitlements; sourceTree = "<group>"; };
 		D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreenView.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D635D44929AE4324008765F8 /* PopupView in Frameworks */,
 				D6249DF029ACD5250075828B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +117,7 @@
 				D6249DED29ACD44E0075828B /* Gallery */,
 				0B0BD336299BB13A00268D44 /* Draw */,
 				0B619C4929ACDC9E001DBD49 /* RoundedCorner.swift */,
+				D635D44329AE2950008765F8 /* NotificationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 			name = DailyDoodle;
 			packageProductDependencies = (
 				D6249DEF29ACD5250075828B /* Lottie */,
+				D635D44829AE4324008765F8 /* PopupView */,
 			);
 			productName = DailyDoodle;
 			productReference = 0DA79588299A7B18003CA2AC /* DailyDoodle.app */;
@@ -324,6 +330,7 @@
 			mainGroup = 0DA7957F299A7B18003CA2AC;
 			packageReferences = (
 				D6249DEE29ACD5250075828B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				D635D44729AE4324008765F8 /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = 0DA79589299A7B18003CA2AC /* Products */;
 			projectDirPath = "";
@@ -408,6 +415,7 @@
 				0B0BD38429A7B0DC00268D44 /* DateHelper.swift in Sources */,
 				0B0BD371299E718200268D44 /* ElementsView.swift in Sources */,
 				D65AC56729A15F3300F91B85 /* SecondPage.swift in Sources */,
+				D635D44429AE2950008765F8 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +654,14 @@
 				kind = branch;
 			};
 		};
+		D635D44729AE4324008765F8 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -653,6 +669,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D6249DEE29ACD5250075828B /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		D635D44829AE4324008765F8 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D635D44729AE4324008765F8 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
 		};
 /* End XCSwiftPackageProductDependency section */
 

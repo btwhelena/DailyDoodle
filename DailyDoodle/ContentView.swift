@@ -10,6 +10,8 @@ import PencilKit
 
 struct ContentView: View {
     @State var isActive = false
+    @State var sheetNotification = false
+    @StateObject var lnManager = LocalNotificationManager()
 
     var body: some View {
         NavigationStack {
@@ -18,11 +20,27 @@ struct ContentView: View {
                 VStack {
                     Elements()
                     Spacer(minLength: 32)
-                    Text("Today's Challenge")
-                        .frame(maxWidth: 330, alignment: .leading)
+                    HStack{
+                        Text("Today's Challenge")
+                            .frame(maxWidth: 360, alignment: .leading)
                         .font(.system(size: 24, design: .rounded))
-                        .multilineTextAlignment(.leading)
-                        .padding(20)
+                            .multilineTextAlignment(.leading)
+                        Button {
+                            self.sheetNotification = true
+                        } label: {
+                            Image(systemName: "bell.and.waves.left.and.right.fill")
+                                .sheet(isPresented: $sheetNotification) {
+                                    NotificationView( sheetNotification: $sheetNotification)
+                                        .environmentObject(self.lnManager)
+                                        .presentationDetents([.medium])
+                                        .presentationDragIndicator(.visible)
+            
+                                }
+                        }
+
+                    }
+                    .frame(maxWidth: 360)
+
                     NavigationLink(destination:
                                     DailyChallengeView()
                                    , isActive: $isActive) {
@@ -33,13 +51,13 @@ struct ContentView: View {
                             Image(decorative: "CHALLENGE-\(DateHelper.getCurrentDay())")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 330, height: 200)
+                                .frame(width: 360, height: 200)
                                 .cornerRadius(15)
                                 .clipShape(Rectangle())
                                 .overlay(
                                     Rectangle()
                                         .fill(Color("Background")).opacity(0.5)
-                                        .frame(width: 330, height: 50)
+                                        .frame(width: 360, height: 50)
                                         .cornerRadius(15, corners: [.bottomLeft, .bottomRight])
                                         .padding(.top, 150)
                                         .overlay(alignment: .bottomTrailing) {
@@ -55,17 +73,23 @@ struct ContentView: View {
                                                 .padding(.bottom, 5)
                                         }
                                 )
+                                .shadow(color: Color.black.opacity(0.25), radius: 4, x: 0, y: 3)
                         }
                     }
-                                   .accessibilityLabel("Start Challenge")
+                    .accessibilityLabel("Start Challenge")
                     Spacer(minLength: 32)
+                    VStack {
                     Text("Your drawings")
-                        .frame(maxWidth: 330, alignment: .leading)
+                            .frame(maxWidth: 360, alignment: .leading)
                         .font(.system(size: 24, design: .rounded))
-                        .multilineTextAlignment(.leading)
-                        .padding(20)
-                    GalleryPreviews().frame(maxWidth: 330, alignment: .leading)
+                            .multilineTextAlignment(.leading)
+                            .padding(20)
+                        GalleryPreviews()
+                            .frame(maxWidth: 360, alignment: .leading)
+                    }
                 }
+//                .padding(20)
+
             }
             .ignoresSafeArea()
         }
@@ -73,10 +97,6 @@ struct ContentView: View {
 
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+
 
 

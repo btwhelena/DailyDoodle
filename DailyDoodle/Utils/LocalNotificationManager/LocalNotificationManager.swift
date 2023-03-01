@@ -7,6 +7,7 @@
 
 import Foundation
 import NotificationCenter
+import UserNotifications
 
 @MainActor
 class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCenterDelegate {
@@ -33,6 +34,10 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
         isGrated = (currentSettings.authorizationStatus == .authorized)
     }
 
+    func deleteAllPendingNotifications() {
+                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+
     func schedule(localNotification: LocalNotification) async throws {
         let content = UNMutableNotificationContent()
         content.title = localNotification.title
@@ -43,8 +48,9 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
         guard let dateComponents = localNotification.dateComponents else { return }
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: localNotification.repeats)
         let request = UNNotificationRequest(identifier: localNotification.identifier, content: content, trigger: trigger)
+        deleteAllPendingNotifications()
         try? await notificationCenter.add(request)
-        print([localNotification])
+        print([request])
     }
 }
 

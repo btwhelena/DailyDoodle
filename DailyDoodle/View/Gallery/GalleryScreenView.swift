@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PopupView
 
 struct Card: Identifiable {
     let id = UUID()
@@ -15,9 +16,11 @@ struct Card: Identifiable {
 struct CardView: View {
     let draw : Drawing
 
-    @State var isImageFullScreen = false
+   // @State var isImageFullScreen = false
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var canvasView = PKCanvasRepresentation()
     @State var drawVM = DrawViewModel()
+    @State var showingPopup = false
 
 
     var body: some View {
@@ -27,14 +30,35 @@ struct CardView: View {
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             HStack{
-                                Button(action: share, label: {
+                                Button {
+                                    share()
+                                } label: {
                                     Image(systemName: "square.and.arrow.up")
-                                })
+                                }
 
-                                Button(action: {drawVM.delete(draw: draw)}, label: {
+                                Button {
+                                    showingPopup = true
+                                } label: {
                                     Image(systemName: "trash")
-                                })
+                                }
+
                             }
+                            .alert("Delete drawing?", isPresented: $showingPopup) {
+                                HStack {
+                                    Button("Cancel", role: .cancel) {
+                                        showingPopup = false
+                                    }
+
+                                    Button("Delete", role: .destructive) {
+                                        self.presentationMode.wrappedValue.dismiss()
+                                        drawVM.delete(draw: draw)
+                                        showingPopup = false
+
+                                    }
+                                }
+
+                            }
+
                         }
                     }
             } label: {
@@ -99,3 +123,4 @@ struct DrawsView<Results:RandomAccessCollection>: View where Results.Element == 
 
     
 }
+
