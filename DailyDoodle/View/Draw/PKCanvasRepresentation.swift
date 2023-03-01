@@ -33,7 +33,6 @@ struct PKCanvasRepresentation: UIViewRepresentable {
 
     func finishChallenge() {
         let image = canvas.drawing.image(from: canvas.bounds, scale: UIScreen.main.scale)
-        drawVM.downloadImage(image: image)
         simpleSuccess()
         
     }
