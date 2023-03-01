@@ -47,17 +47,17 @@ struct NotificationView: View {
             }
             .padding(.bottom, 50)
 
-            Toggle("Apresentar as notificações", isOn: $isOn)
+            Toggle("Enable notifications", isOn: $isOn)
                 .toggleStyle(SwitchToggleStyle(tint: Color("CTA")))
-                .font(Font.custom("Comfortaa-Regular", size: 18))
-                .foregroundColor(.black)
+                .font(.system(size: 18, design: .rounded))
+                .foregroundColor(Color("Text"))
                 .multilineTextAlignment(.leading)
                 .padding(.bottom, 20)
 
 
             DatePicker("Pick your favorite time to draw", selection: $scheduleDate, displayedComponents: .hourAndMinute)
-                .font(Font.custom("Comfortaa-Regular", size: 18))
-                .foregroundColor(.black)
+                .font(.system(size: 18, design: .rounded))
+                .foregroundColor(Color("Text"))
                 .multilineTextAlignment(.leading)
                 .onAppear {
                     guard let date = Calendar.current.date(bySettingHour: 20, minute: 30, second: 0, of: Date()) else {
@@ -68,6 +68,7 @@ struct NotificationView: View {
             Spacer()
         }
         .padding(20)
+        .background(Color("Background"))
     }
 }
 

@@ -30,6 +30,7 @@ struct GalleryPreviews: View {
                                 .cornerRadius(15)
                         }
                     }
+                    .shadow(color: Color.black.opacity(0.25), radius: 4, x: 0, y: 3)
                 }
             }
         }
