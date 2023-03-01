@@ -49,14 +49,14 @@ struct NotificationView: View {
 
             Toggle("Enable notifications", isOn: $isOn)
                 .toggleStyle(SwitchToggleStyle(tint: Color("CTA")))
-                .font(.system(size: 18, design: .rounded))
+                .font(.system(.body, design: .rounded))
                 .foregroundColor(Color("Text"))
                 .multilineTextAlignment(.leading)
                 .padding(.bottom, 20)
 
 
             DatePicker("Pick your favorite time to draw", selection: $scheduleDate, displayedComponents: .hourAndMinute)
-                .font(.system(size: 18, design: .rounded))
+                .font(.system(.body, design: .rounded))
                 .foregroundColor(Color("Text"))
                 .multilineTextAlignment(.leading)
                 .onAppear {
