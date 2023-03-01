@@ -29,7 +29,7 @@ struct ThirdPage: View {
                     .multilineTextAlignment(.leading)
                 Text("Pick your favorite time to draw")
                     .frame(maxWidth: 330, alignment: .leading)
-                    .font(.system(size: 24, design: .rounded))
+                    .font(.system(.title2, design: .rounded))
                     .multilineTextAlignment(.leading)
 
                 DatePicker("", selection: $scheduleDate, displayedComponents: .hourAndMinute)
@@ -58,9 +58,9 @@ struct ThirdPage: View {
                             .cornerRadius(30.0)
                             .foregroundColor(Color("CTA"))
                             .frame(width: 180.0, height: 44.0, alignment: .center)
-                        Text("Start Now")
+                        Text("Start now")
                             .foregroundColor(Color.white)
-                            .font(.system(size: 24, design: .rounded))
+                            .font(.system(.headline, design: .rounded))
                     }
                 }
 

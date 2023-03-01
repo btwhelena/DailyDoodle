@@ -25,14 +25,12 @@ struct SecondPage: View {
                     .multilineTextAlignment(.leading)
                     .padding(50)
 
-                let animation = LottieView(name: colorScheme == .dark ? "DarkMode" : "LightMode", isPaused: .constant(false))
+                LottieView(name: colorScheme == .dark ? "DarkMode" : "LightMode", isPaused: .constant(false))
                     .frame(width: 260.0, height: 250.0)
 
-                animation
-
                 Text("You will do daily challenges trying to reproduce reference images through drawings.")
-                    .frame(maxWidth: 330, alignment: .leading)
-                    .font(.system(size: 24, design: .rounded))
+                    .frame(maxWidth: 330, alignment: .center)
+                    .font(.system(.title2, design: .rounded))
                     .multilineTextAlignment(.center)
                     .padding(50)
             }.ignoresSafeArea()

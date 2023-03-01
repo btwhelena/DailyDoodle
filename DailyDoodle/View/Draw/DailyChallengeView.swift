@@ -29,7 +29,7 @@ struct DailyChallengeView: View {
 
                     Text("Today's Challenge")
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .font(.system(size: 28, design: .rounded).weight(.bold))
+                        .font(.system(.title, design: .rounded).weight(.bold))
                         .padding(.bottom, 15)
                         .multilineTextAlignment(.center)
 
@@ -46,7 +46,7 @@ struct DailyChallengeView: View {
                         .frame(maxWidth: 330, alignment: .center)
                         .padding(.top, 15)
                         .padding(.bottom, 15)
-                        .font(.system(size: 24, design: .rounded))
+                        .font(.system(.body, design: .rounded))
                         .multilineTextAlignment(.center)
 
 
@@ -102,7 +102,7 @@ struct DailyChallengeView: View {
                                     .cornerRadius(35)
 
                                 Text("Start drawing")
-                                    .font(.system(size: 20, design: .rounded))
+                                    .font(.system(.headline, design: .rounded))
                                     .foregroundColor(.white)
                             }
                         }
@@ -126,7 +126,7 @@ struct DailyChallengeView: View {
                                     )
 
                             Text("Upload drawing")
-                                .font(.system(size: 20, design: .rounded))
+                                .font(.system(.headline, design: .rounded))
                                 .foregroundColor(Color("CTA"))
                         }
                         .sheet(isPresented: $showSheet) {

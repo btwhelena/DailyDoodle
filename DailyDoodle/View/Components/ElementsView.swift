@@ -19,12 +19,12 @@ struct Elements: View {
                 Text("This month challenge:")
                     .padding(.top, 30)
                     .foregroundColor(.white)
-                    .font(.system(size: 24, design: .rounded))
+                    .font(.system(.title, design: .rounded))
                     .frame(maxWidth: .infinity, alignment: .center)
 
                 Text("Animals")
                     .foregroundColor(.white)
-                    .font(.system(size: 32, design: .rounded))
+                    .font(.system(.largeTitle, design: .rounded))
                     .frame(maxWidth: .infinity, alignment: .center)
 
             }

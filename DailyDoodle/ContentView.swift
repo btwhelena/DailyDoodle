@@ -23,7 +23,7 @@ struct ContentView: View {
                     HStack{
                         Text("Today's Challenge")
                             .frame(maxWidth: 360, alignment: .leading)
-                        .font(.system(size: 24, design: .rounded))
+                            .font(.system(.title, design: .rounded))
                             .multilineTextAlignment(.leading)
                         Button {
                             self.sheetNotification = true
@@ -63,12 +63,12 @@ struct ContentView: View {
                                         .overlay(alignment: .bottomTrailing) {
                                             HStack {
                                                 Text("Start Challenge")
-                                                    .font(.system(size: 24, design: .rounded))
+                                                    .font(.system(.title2, design: .rounded))
                                                     .foregroundColor(Color("Text"))
 
                                                 Image(systemName: "chevron.right.circle")
                                                     .foregroundColor(Color("Text"))
-                                                    .font(.title)
+                                                    .font(.headline)
                                             } .padding(.trailing, 10)
                                                 .padding(.bottom, 5)
                                         }
@@ -81,7 +81,7 @@ struct ContentView: View {
                     VStack {
                     Text("Your drawings")
                             .frame(maxWidth: 360, alignment: .leading)
-                        .font(.system(size: 24, design: .rounded))
+                            .font(.system(.title, design: .rounded))
                             .multilineTextAlignment(.leading)
                             .padding(20)
                         GalleryPreviews()
