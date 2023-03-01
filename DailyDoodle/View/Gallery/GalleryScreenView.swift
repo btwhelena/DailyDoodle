@@ -62,11 +62,21 @@ struct CardView: View {
                         }
                     }
             } label: {
-                Image(uiImage: draw.imagJPEG!)
-                    .resizable()
-                    .foregroundColor(.accentColor)
-                    .frame(width: UIScreen.main.bounds.width/3.2)
-                    .padding(10)
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(Color("Background"))
+                        .frame(width: UIScreen.main.bounds.width/3.2)
+                        .cornerRadius(12)
+                        .shadow(color: Color.black.opacity(0.25), radius: 4, x: 0, y: 3)
+                    Image(uiImage: draw.imagJPEG!)
+                        .resizable()
+    //                    .foregroundColor(.accentColor)
+                        .cornerRadius(12)
+                        .frame(width: UIScreen.main.bounds.width/3.2)
+
+                }
+                .padding(4)
+
             }.accessibilityLabel("Your drawing")
 
         }
