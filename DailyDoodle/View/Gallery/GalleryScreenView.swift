@@ -16,68 +16,68 @@ struct Card: Identifiable {
 struct CardView: View {
     let draw : Drawing
 
-   // @State var isImageFullScreen = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var canvasView = PKCanvasRepresentation()
     @State var drawVM = DrawViewModel()
     @State var showingPopup = false
+    @Environment(\.dismiss) var dismiss
+    
 
 
     var body: some View {
+
         VStack {
-            NavigationLink {
-                FullScreenModalView(image: draw.imagJPEG!)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            HStack{
-                                Button {
-                                    share()
-                                } label: {
-                                    Image(systemName: "square.and.arrow.up")
-                                }
+            if(draw.imagJPEG != nil) {
+                NavigationLink {
+                    FullScreenModalView(image: (draw.imagJPEG ?? UIImage(named: "blank-canva-light")!))
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                HStack{
+                                    Button {
+                                        share()
+                                    } label: {
+                                        Image(systemName: "square.and.arrow.up")
+                                    }
 
-                                Button {
-                                    showingPopup = true
-                                } label: {
-                                    Image(systemName: "trash")
+                                    Button {
+                                        showingPopup.toggle()
+                                    } label: {
+                                        Image(systemName: "trash")
+                                    }
+                                }
+                                .alert("Delete drawing?", isPresented: $showingPopup) {
+                                    HStack {
+                                        Button("Cancel", role: .cancel) {
+                                            showingPopup = false
+                                        }
+
+                                        Button("Delete", role: .destructive) {
+                                            drawVM.delete(draw: draw)
+                                            showingPopup = false
+                                        }
+                                    }
+
                                 }
 
                             }
-                            .alert("Delete drawing?", isPresented: $showingPopup) {
-                                HStack {
-                                    Button("Cancel", role: .cancel) {
-                                        showingPopup = false
-                                    }
-
-                                    Button("Delete", role: .destructive) {
-                                        self.presentationMode.wrappedValue.dismiss()
-                                        drawVM.delete(draw: draw)
-                                        showingPopup = false
-
-                                    }
-                                }
-
-                            }
-
                         }
-                    }
-            } label: {
-                Image(uiImage: draw.imagJPEG!)
-                    .resizable()
-                    .foregroundColor(.accentColor)
-                    .frame(width: UIScreen.main.bounds.width/3.2)
-                    .padding(10)
-            }.accessibilityLabel("Your drawing")
-
+                        .background(Color("Background"))
+                } label: {
+                    Image(uiImage: draw.imagJPEG ?? UIImage(named: "blank-canva-light")!)
+                        .resizable()
+                        .foregroundColor(.accentColor)
+                        .frame(width: UIScreen.main.bounds.width/3.2)
+                        .padding(10)
+                }.accessibilityLabel("Your drawing")
+            }
         }
     }
 
-    func share(){
+    func share() {
         guard let image = draw.imagJPEG else { return }
         let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
     }
-
 }
 
 struct GalleryScreenView: View {
@@ -106,10 +106,11 @@ struct DrawsView<Results:RandomAccessCollection>: View where Results.Element == 
     var body: some View {
 
         let drawsFiltered = results.filter { $0.challenge!.contains(challenge) }
+        let drawingsTemp = drawsFiltered
 
         ScrollView {
             LazyVGrid(columns: adaptiveColumns, spacing: 16) {
-                ForEach(drawsFiltered, id: \.self) { draw in
+                ForEach(drawingsTemp, id: \.self) { draw in
                     if draw.imagJPEG != nil {
                         CardView(draw: draw)
                             .frame(height: height)
@@ -118,9 +119,8 @@ struct DrawsView<Results:RandomAccessCollection>: View where Results.Element == 
             }
             .padding()
 
-        }
-    }
 
-    
+        }.background(Color("Background"))
+    }
 }
 

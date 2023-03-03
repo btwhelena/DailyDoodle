@@ -1,0 +1,38 @@
+{
+    "images": [
+        {
+            "name": "CHALLENGE-2",
+            "description": "Urso branco sentado sobre as partas traseiras com a pata frontal direita levantada como se estivesse acenando, enquanto a outra está repousando perto do coração, está um local frio e com o chão coberto de neve."
+
+        },
+        {
+            "name": "CHALLENGE-3",
+            "description": "Raposa de pelagem com majoritariamente cor vermelha, com a aréa do peito branca, com as orelhas e as patas com a pelagem preta, de lado para o espectador, olhando para trás, com montanhas cobertas de neve ao fundo"
+
+        },
+
+        {
+            "name": "CHALLENGE-4",
+            "description": "Pequeno lagarto com escamas verdes, de frente para o espectador, com o olhos semi cerrados estando em cima de um pedaço de madeira, com o fundo borrado"
+
+        },
+
+        {
+            "name": "CHALLENGE-5",
+            "description": "Esquilo com a pelugem alaranjada, de lado para o espectador, comendo uma nóz em cima de uma pedaço de madeira, com o fudno verde"
+
+        },
+
+        {
+            "name": "CHALLENGE-6",
+            "description": "Cervo macho de frente para o espectador de pelugem marrom escuro, em cima de uma planície verde escura com neblina ao fundo"
+
+        },
+
+        {
+            "name": "CHALLENGE-7",
+            "description": "Um passaro azul com a barriguinha redonda com as penas da cauda vermelhas, de lado para o espectador, em cima de uma pedra, com o fundo borrado"
+
+        }
+    ]
+}

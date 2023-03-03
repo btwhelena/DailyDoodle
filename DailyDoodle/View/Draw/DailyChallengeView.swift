@@ -109,7 +109,7 @@ struct DailyChallengeView: View {
                     }
 
                     Button {
-                        showSheet = true
+                        showSheet.toggle()
                     } label: {
 
                         ZStack{

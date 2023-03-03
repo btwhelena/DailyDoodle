@@ -47,10 +47,7 @@ struct ThirdPage: View {
                 Button {
                     shouldShowOnboarding = false
                     Task{
-                        try? await lnManager.requestNotification()
-                        let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: scheduleDate)
-                        let notification = LocalNotification(identifier: UUID().uuidString, title: "Daily Doodle", body: "It's time to draw some doodles!", dateComponents: dateComponents, repeats: true)
-                        try? await lnManager.schedule(localNotification: notification)
+                        await lnManager.scheduleNotification(scheduleDate: scheduleDate)
                     }
                 } label: {
                     ZStack{

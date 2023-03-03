@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var isActive = false
     @State var sheetNotification = false
     @StateObject var lnManager = LocalNotificationManager()
+    private let imagemDescription = DescriptionModel.loadJson()
 
     var body: some View {
         NavigationStack {
@@ -26,7 +27,7 @@ struct ContentView: View {
                         .font(.system(size: 24, design: .rounded))
                             .multilineTextAlignment(.leading)
                         Button {
-                            self.sheetNotification = true
+                            sheetNotification.toggle()
                         } label: {
                             Image(systemName: "bell.and.waves.left.and.right.fill")
                                 .sheet(isPresented: $sheetNotification) {
@@ -36,6 +37,7 @@ struct ContentView: View {
                                         .presentationDragIndicator(.visible)
             
                                 }
+                                .accessibilityLabel("Notification Settings")
                         }
 
                     }
@@ -74,21 +76,23 @@ struct ContentView: View {
                                         }
                                 )
                                 .shadow(color: Color.black.opacity(0.25), radius: 4, x: 0, y: 3)
+                              //  .accessibilityLabel(Text(imagemDescription?.randomElement()))
                         }
                     }
                     .accessibilityLabel("Start Challenge")
                     Spacer(minLength: 32)
                     VStack {
                     Text("Your drawings")
-                            .frame(maxWidth: 360, alignment: .leading)
+                        .frame(maxWidth: 360, alignment: .leading)
                         .font(.system(size: 24, design: .rounded))
-                            .multilineTextAlignment(.leading)
-                            .padding(20)
-                        GalleryPreviews()
-                            .frame(maxWidth: 360, alignment: .leading)
+                        .multilineTextAlignment(.leading)
+                        .padding(20)
+                    GalleryPreviews()
+                        .frame(maxWidth: 360, alignment: .leading)
                     }
+
+
                 }
-//                .padding(20)
 
             }
             .ignoresSafeArea()

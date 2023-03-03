@@ -18,19 +18,24 @@ struct FullScreenModalView: View {
     }
 
     var body: some View {
-        FullPictureView(image: image)
-            .background(BackgroundBlurView())
-            .offset(offset)
-            .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
-                .onChanged { gesture in
-                    offset = gesture.translation
-                }
-                .onEnded({ value in
-                    withAnimation {
-                        offset = CGSize(width: 0, height: 0)
+            FullPictureView(image: image)
+                //.background(BackgroundBlurView())
+                .offset(offset)
+                .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                    .onChanged { gesture in
+                        offset = gesture.translation
                     }
-                    dismiss()
-                }))
+                    .onEnded({ value in
+                        withAnimation {
+                            offset = CGSize(width: 0, height: 0)
+                        }
+                        dismiss()
+                    }))
+
+    }
+
+    func dismissImage() {
+        self.dismiss()
     }
 }
 
