@@ -26,7 +26,7 @@ struct ContentView: View {
                             .font(.system(.title, design: .rounded))
                             .multilineTextAlignment(.leading)
                         Button {
-                            self.sheetNotification = true
+                            sheetNotification.toggle()
                         } label: {
                             Image(systemName: "bell.and.waves.left.and.right.fill")
                                 .sheet(isPresented: $sheetNotification) {
@@ -36,6 +36,7 @@ struct ContentView: View {
                                         .presentationDragIndicator(.visible)
             
                                 }
+                                .accessibilityLabel("Notification Settings")
                         }
 
                     }
@@ -87,8 +88,9 @@ struct ContentView: View {
                         GalleryPreviews()
                             .frame(maxWidth: 360, alignment: .leading)
                     }
+
+
                 }
-//                .padding(20)
 
             }
             .ignoresSafeArea()

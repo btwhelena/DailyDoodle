@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct FullPictureView: View {
-  var image: UIImage
-  var body: some View {
-    ZoomableScrollView {
-        Image(uiImage: image)
-        .resizable()
-        .scaledToFit()
+    var image: UIImage
+    var body: some View {
+        ZoomableScrollView {
+            ZStack {
+                Color("Background")
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+            }
+        }.ignoresSafeArea()
     }
-  }
 }

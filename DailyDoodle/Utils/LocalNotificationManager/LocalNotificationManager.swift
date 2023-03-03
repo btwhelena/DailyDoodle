@@ -17,7 +17,13 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
     override init() {
         super.init()
         notificationCenter.delegate = self
+    }
 
+    func scheduleNotification(scheduleDate: Date) async {
+        try? await requestNotification()
+        let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: scheduleDate)
+        let notification = LocalNotification(identifier: UUID().uuidString, title: "Daily Doodle", body: "It's time to draw some doodles!", dateComponents: dateComponents, repeats: true)
+        try? await schedule(localNotification: notification)
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {

@@ -25,8 +25,13 @@ struct SecondPage: View {
                     .multilineTextAlignment(.leading)
                     .padding(50)
 
-                LottieView(name: colorScheme == .dark ? "DarkMode" : "LightMode", isPaused: .constant(false))
-                    .frame(width: 260.0, height: 250.0)
+                if colorScheme == .dark{
+                    LottieView(name: "DarkMode", isPaused: .constant(false))
+                        .frame(width: 260.0, height: 250.0)
+                } else {
+                    LottieView(name: "LightMode", isPaused: .constant(false))
+                        .frame(width: 260.0, height: 250.0)
+                }
 
                 Text("You will do daily challenges trying to reproduce reference images through drawings.")
                     .frame(maxWidth: 330, alignment: .center)

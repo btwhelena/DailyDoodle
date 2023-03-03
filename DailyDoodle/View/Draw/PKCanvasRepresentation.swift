@@ -34,9 +34,8 @@ struct PKCanvasRepresentation: UIViewRepresentable {
     func finishChallenge() {
         let image = canvas.drawing.image(from: canvas.bounds, scale: UIScreen.main.scale)
         simpleSuccess()
-        
+        drawVM.downloadImage(image: image)
     }
-
     func simpleSuccess() {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)

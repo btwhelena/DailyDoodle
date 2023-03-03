@@ -39,6 +39,10 @@
 		D6249DF729ACD6B40075828B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6249DF629ACD6B40075828B /* LottieView.swift */; };
 		D635D44429AE2950008765F8 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635D44329AE2950008765F8 /* NotificationView.swift */; };
 		D635D44929AE4324008765F8 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D635D44829AE4324008765F8 /* PopupView */; };
+		D635D44B29AF9C97008765F8 /* empty-screen-light.json in Resources */ = {isa = PBXBuildFile; fileRef = D635D44A29AF9C97008765F8 /* empty-screen-light.json */; };
+		D635D44F29B0DB44008765F8 /* ImagensDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = D635D44E29B0DB44008765F8 /* ImagensDescription.json */; };
+		D635D45129B0E5AC008765F8 /* DecoderJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635D45029B0E5AC008765F8 /* DecoderJSON.swift */; };
+		D635D45729B21AFB008765F8 /* empty-screen-dark1.json in Resources */ = {isa = PBXBuildFile; fileRef = D635D45629B21AFB008765F8 /* empty-screen-dark1.json */; };
 		D64750C6299E5DF6003D6CC3 /* GalleryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */; };
 		D65AC56229A15B6E00F91B85 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56129A15B6E00F91B85 /* OnboardingView.swift */; };
 		D65AC56529A15F2800F91B85 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65AC56429A15F2800F91B85 /* FirstPage.swift */; };
@@ -84,6 +88,10 @@
 		D6249DF329ACD5DC0075828B /* LightMode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LightMode.json; sourceTree = "<group>"; };
 		D6249DF629ACD6B40075828B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D635D44329AE2950008765F8 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D635D44A29AF9C97008765F8 /* empty-screen-light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "empty-screen-light.json"; sourceTree = "<group>"; };
+		D635D44E29B0DB44008765F8 /* ImagensDescription.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = ImagensDescription.json; sourceTree = "<group>"; };
+		D635D45029B0E5AC008765F8 /* DecoderJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderJSON.swift; sourceTree = "<group>"; };
+		D635D45629B21AFB008765F8 /* empty-screen-dark1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "empty-screen-dark1.json"; sourceTree = "<group>"; };
 		D63C9AC6299BB822008058B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D63C9AC9299BB88F008058B8 /* DailyDoodleRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodleRelease.entitlements; sourceTree = "<group>"; };
 		D64750C5299E5DF6003D6CC3 /* GalleryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreenView.swift; sourceTree = "<group>"; };
@@ -135,7 +143,6 @@
 		0B0BD33B299BC56100268D44 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D6249DF129ACD5B80075828B /* Lottie */,
 				0B0BD370299E718200268D44 /* ElementsView.swift */,
 				0D6B0146299E62FF00B34135 /* ImagePicker.swift */,
 				0B0BD33E299BC9C300268D44 /* PictureView */,
@@ -159,9 +166,13 @@
 		0B0BD38229A7B0C800268D44 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D6249DF129ACD5B80075828B /* Lottie */,
+				0B0BD39929A8EFFE00268D44 /* Localizable.strings */,
 				0D6B0138299BB84A00B34135 /* Fonts */,
 				D65AC56A29A1711000F91B85 /* LocalNotificationManager */,
 				0B0BD38329A7B0DC00268D44 /* DateHelper.swift */,
+				D635D44E29B0DB44008765F8 /* ImagensDescription.json */,
+				D635D45029B0E5AC008765F8 /* DecoderJSON.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -206,17 +217,16 @@
 		0DA7958A299A7B18003CA2AC /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				0B0BD335299BB12F00268D44 /* View */,
 				0B0BD38929A7B4F900268D44 /* CoreData_iCloud */,
 				0B0BD38229A7B0C800268D44 /* Utils */,
 				0B0BD38129A790EE00268D44 /* DailyDoodle.entitlements */,
 				0B0BD37629A7875600268D44 /* ContentView.swift */,
-				0B0BD335299BB12F00268D44 /* View */,
 				D63C9AC9299BB88F008058B8 /* DailyDoodleRelease.entitlements */,
 				D63C9AC6299BB822008058B8 /* Info.plist */,
 				0DA7958B299A7B18003CA2AC /* DailyDoodleApp.swift */,
 				0DA7958F299A7B19003CA2AC /* Assets.xcassets */,
 				0DA79591299A7B19003CA2AC /* Preview Content */,
-				0B0BD39929A8EFFE00268D44 /* Localizable.strings */,
 			);
 			path = DailyDoodle;
 			sourceTree = "<group>";
@@ -241,6 +251,8 @@
 		D6249DF129ACD5B80075828B /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				D635D45629B21AFB008765F8 /* empty-screen-dark1.json */,
+				D635D44A29AF9C97008765F8 /* empty-screen-light.json */,
 				0BA5A27B29AE4C9E0092FE45 /* confirm-dark.json */,
 				0B619C4B29AE29E7001DBD49 /* confirm.json */,
 				D6249DF229ACD5DB0075828B /* DarkMode.json */,
@@ -347,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6249DF429ACD5DC0075828B /* DarkMode.json in Resources */,
+				D635D44B29AF9C97008765F8 /* empty-screen-light.json in Resources */,
 				0B619C4C29AE29E7001DBD49 /* confirm.json in Resources */,
 				0DA79593299A7B19003CA2AC /* Preview Assets.xcassets in Resources */,
 				0B0BD39729A8EFFE00268D44 /* Localizable.strings in Resources */,
@@ -354,6 +367,8 @@
 				D6249DF529ACD5DC0075828B /* LightMode.json in Resources */,
 				0BA5A27C29AE4C9E0092FE45 /* confirm-dark.json in Resources */,
 				D6AEA2C229A2536400FBE1C0 /* Comfortaa-Bold.ttf in Resources */,
+				D635D44F29B0DB44008765F8 /* ImagensDescription.json in Resources */,
+				D635D45729B21AFB008765F8 /* empty-screen-dark1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +428,7 @@
 				D65AC56C29A1714000F91B85 /* LocalNotificationModel.swift in Sources */,
 				0B0BD38E29A7B58F00268D44 /* Drawing.swift in Sources */,
 				0B0BD38429A7B0DC00268D44 /* DateHelper.swift in Sources */,
+				D635D45129B0E5AC008765F8 /* DecoderJSON.swift in Sources */,
 				0B0BD371299E718200268D44 /* ElementsView.swift in Sources */,
 				D65AC56729A15F3300F91B85 /* SecondPage.swift in Sources */,
 				D635D44429AE2950008765F8 /* NotificationView.swift in Sources */,
