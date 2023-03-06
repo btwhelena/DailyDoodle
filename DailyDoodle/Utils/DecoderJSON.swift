@@ -12,7 +12,28 @@ class DecoderJSON: ObservableObject {
         }
 
         func loadData()  {
-            guard let url = Bundle.main.path(forResource: "ImagensDescription", ofType: "json")
+
+            var filename = "ImagesDescriptions-EN"
+
+            if Locale.current.language.languageCode != nil {
+
+                let deviceLanguage = Locale.current.language.languageCode!.identifier
+
+                switch deviceLanguage {
+                case "pt":
+                    filename = "ImagesDescriptions-PT"
+                case "es":
+                    filename = "ImagesDescriptions-ES"
+                case "fr":
+                    filename = "ImagesDescriptions-FR"
+                case "it":
+                    filename = "ImagesDescriptions-IT"
+                default:
+                    filename = "ImagesDescriptions-EN"
+                }
+            }
+
+            guard let url = Bundle.main.path(forResource: filename, ofType: "json")
                 else {
                     print("Json file not found")
                     return

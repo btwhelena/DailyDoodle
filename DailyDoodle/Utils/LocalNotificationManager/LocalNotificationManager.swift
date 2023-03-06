@@ -22,8 +22,32 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
     func scheduleNotification(scheduleDate: Date) async {
         try? await requestNotification()
         let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: scheduleDate)
-        let notification = LocalNotification(identifier: UUID().uuidString, title: "Daily Doodle", body: "It's time to draw some doodles!", dateComponents: dateComponents, repeats: true)
+        let notification = LocalNotification(identifier: UUID().uuidString, title: "Daily Doodle", body: self.getLocalizedMessage(), dateComponents: dateComponents, repeats: true)
         try? await schedule(localNotification: notification)
+    }
+
+    func getLocalizedMessage() -> String {
+
+
+        if Locale.current.language.languageCode != nil {
+
+            let deviceLanguage = Locale.current.language.languageCode!.identifier
+
+            switch deviceLanguage {
+            case "pt":
+                return "Hora de desenhar! 🎨";
+            case "es":
+                return "¡Hora de dibujar! 🎨"
+            case "fr":
+                return "C'est l'heure de dessiner ! 🎨"
+            case "it":
+                return "È ora di disegnare! 🎨"
+            default:
+                return "Time to doodle! 🎨"
+            }
+        }
+        return "Time to doodle! 🎨"
+
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {

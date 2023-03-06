@@ -1,0 +1,44 @@
+{
+    "imageDescriptions": [
+        {
+            "id": 2,
+            "name": "CHALLENGE-10",
+            "description": "Orso bianco seduto sulle zampe posteriori con la zampa anteriore destra sollevata come per salutare, mentre l'altra è appoggiata vicino al cuore, è un luogo freddo e il terreno è coperto di neve."
+
+        },
+        {
+            "id": 3,
+            "name": "CHALLENGE-7",
+            "description": "Volpe con pelo prevalentemente rosso, con zona pettorale bianca, con pelo nero su orecchie e zampe, di fronte allo spettatore, guardando indietro, con montagne innevate sullo sfondo"
+
+        },
+
+        {
+            "id": 4,
+            "name": "CHALLENGE-6",
+            "description": "Piccola lucertola con scaglie verdi, di fronte allo spettatore, con gli occhi semichiusi in piedi su un pezzo di legno, con lo sfondo sfocato"
+
+        },
+
+        {
+            "id": 5,
+            "name": "CHALLENGE-5",
+            "description": "Scoiattolo rivolto verso lo spettatore, curvo, che mangia una noce su un pezzo di legno, sfondo verde"
+
+        },
+
+        {
+            "id": 6,
+            "name": "CHALLENGE-9",
+            "description": "Cervo maschio di fronte allo spettatore con pelliccia marrone scuro, sopra una pianura verde scuro con nebbia sullo sfondo"
+
+        },
+
+        {
+            "id": 7,
+            "name": "CHALLENGE-8",
+            "description": "Un uccello blu con un piccolo ventre rotondo e piume di coda rosse, rivolto verso lo spettatore, in cima a una roccia, sfondo sfocato"
+
+        }
+    ]
+}

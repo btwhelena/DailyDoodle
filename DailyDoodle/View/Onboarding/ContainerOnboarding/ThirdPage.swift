@@ -54,7 +54,7 @@ struct ThirdPage: View {
                         Rectangle()
                             .cornerRadius(30.0)
                             .foregroundColor(Color("CTA"))
-                            .frame(width: 180.0, height: 44.0, alignment: .center)
+                            .frame(width: 240.0, height: 44.0, alignment: .center)
                         Text("Start now")
                             .foregroundColor(Color.white)
                             .font(.system(.headline, design: .rounded))
