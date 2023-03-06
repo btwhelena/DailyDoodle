@@ -56,14 +56,12 @@ struct CardView: View {
                                             showingPopup = false
                                         }
                                     }
-                                    
                                 }
                                 
                             }
                         }
                         .background(Color("Background"))
-                    
-                    //                }
+                
                 } label: {
                     ZStack {
                         Rectangle()
@@ -73,7 +71,6 @@ struct CardView: View {
                             .shadow(color: Color.black.opacity(0.25), radius: 4, x: 0, y: 3)
                         Image(uiImage: draw.imagJPEG!)
                             .resizable()
-                        //                    .foregroundColor(.accentColor)
                             .cornerRadius(12)
                             .frame(width: UIScreen.main.bounds.width/3.2)
                         

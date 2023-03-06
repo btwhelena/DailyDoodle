@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  DailyDoodle
+
+  Created by Lais Godinho on 24/02/23.
+  
+*/
+"Today's Challenge" = "La sfida di oggi";
+"Start Challenge" = "Inizia la sfida";
+"Gallery" = "Galleria";
+"Your drawings" = "I tuoi disegni";
+"This month challenge:" = "Questo mese sfida:";
+"Animals" = "Animali";
+"Upload drawing" = "Carica disegno";
+"Start drawing" = "Inizia a disegnare";
+"Try drawing the reference image above or draw it on a paper and upload it to complete the challenge." = "Prova a disegnare l'immagine di riferimento sopra o disegnala su un foglio e caricala per completare la sfida.";
+"Let's get it started?" = "Cominciamo?";
+"Drawings" = "Disegni";
+"You will do daily challenges trying to reproduce reference images through drawings." = "Farai sfide quotidiane cercando di riprodurre immagini di riferimento attraverso i disegni.";
+"Notifications" = "Notifiche";
+"Pick your favorite time to draw" = "Scegli il tuo momento preferito per disegnare";
+"Start now" = "Parti ora";
+"Finish challenge" = "Termina la sfida";
+"Reference Image"= "Immagine di riferimento";
+"Your drawing"= "Tuo disegno";
+"Enable notifications" = "Attivare le notifiche";
+"Cancel" = "Annulla";
+"Save" = "Salva";
+"Notification settings" = "Impostazioni di notifica";
+"Complete challenges to see your drawings." = "Completa le sfide per vedere i tuoi disegni.";
