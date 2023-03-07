@@ -16,7 +16,7 @@ struct DailyDoodleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if !shouldShowOnboarding {
+            if shouldShowOnboarding {
                 OnboardingView()
             } else {
                 ContentView()

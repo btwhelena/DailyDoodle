@@ -35,7 +35,7 @@ class DrawViewModel: ObservableObject {
     }
 
     func delete(draw: Drawing) {
-        if let indexDraw = draws.firstIndex(where: {$0.id == draw.id}){
+        if draws.firstIndex(where: {$0.id == draw.id}) != nil{
             self.context.delete(draw)
             try? self.context.save()
 
