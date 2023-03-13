@@ -16,7 +16,7 @@ struct DailyChallengeView: View {
     @State var canvasView = PKCanvasRepresentation()
     @State var isPaused: Bool = true
     @Environment(\.colorScheme) var colorScheme
-    @ObservedObject var decoder = DecoderJSON()
+    //@ObservedObject var decoder = DecoderJSON()
 
     var body: some View {
             ZStack {
@@ -41,7 +41,7 @@ struct DailyChallengeView: View {
                         .frame(width: 220, height: 220)
                         .cornerRadius(15)
                         .clipShape(Rectangle())
-                        .accessibilityLabel(decoder.getTodaysImageDescription())
+                    //.accessibilityLabel(decoder.getTodaysImageDescription())
 
 
                     Text("Try drawing the reference image above or draw it on a paper and upload it to complete the challenge.")
